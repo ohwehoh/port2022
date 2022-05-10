@@ -1,0 +1,49 @@
+body {
+    background-image: url(../img/bg_yellow.png);
+    overflow-x: hidden;
+}
+
+.sha {
+    color: #E05057 !important;
+}
+
+.shaBox { 
+    background-color: #E05057 !important;
+}
+
+/* section 타이틀 */
+section.cont {
+    position: relative;
+    min-height: 60vw;
+    margin-top: 7vw;
+}
+
+section:nth-child(2n) .title,
+section:last-child .title {
+    position: absolute;
+    right: -16vw;
+}
+
+section:nth-child(2n-1):not(:last-of-type) .title {
+    position: absolute;
+    left: -17vw;
+}
+
+.title,
+.title h2{
+    font-family: "turretroad";
+    font-size: 20vw;
+    font-weight: 100;
+}
+
+h2 { 
+    color: #fff;
+}
+
+.title span.sha {
+    position: absolute;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: -1;
+}
+/* //section 타이틀 */

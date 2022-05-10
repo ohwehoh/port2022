@@ -1,0 +1,263 @@
+.wrap {
+    padding: 0 11vw;
+}
+/* header */
+.wrap #header {
+    padding: 3em 0;
+    font-family: "deciso";
+    font-weight: 900;
+}
+.wrap #header #menu {
+    width: 100%;
+}
+.wrap #header #menu ul {
+    display: flex;
+    justify-content: space-between;
+}
+.wrap #header #menu ul a {
+    display: block;
+}
+.wrap #header #menu ul li a {
+    font-size: 12px;
+}
+.wrap #header #menu ul li a em {
+    display: block;
+    margin-bottom: 1.2em;
+    color: #fff;
+    font-weight: 100;
+}
+.wrap #header #menu ul li a em:last-child {
+    margin-bottom: 0;
+    margin-top: 2.7em;
+}
+.wrap #header #menu ul li a span {
+    color: #000000;
+}
+/* //header */
+
+/* main */
+.wrap #main {
+    margin: 10em 0;
+    width: 100%;
+    height: 100vw;
+    /* background-color: rgba(00,00,00,0.1); */
+}
+/* intro */
+.wrap #main #intro {
+    font-family: "deciso";
+}
+.intro__title {
+    /* background-color: rgba(00,00,00,0.5); */
+    position: relative;
+    width: 100%;
+    height: 24vw;
+}
+
+.intro__title .intro__title__top {
+    color: #000000;
+    font-size: 13vw;
+    font-weight: 900;
+    position: absolute;
+}
+
+.intro__title .tTop {
+    left: -0.9vw;
+    top: -6vw;
+    z-index: 3;
+}
+
+.intro__title .tTop.sha {
+    left: 0.05vw;
+    top: -5vw;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.intro__title .tBottom {
+    top: 5vw;
+    left: -0.9vw;
+    z-index: 3;
+}
+
+.intro__box {
+    position: absolute;
+    left: -2.8vw;
+    top: 6.2vw;
+    background-color: #fff;
+    width: 71vw;
+    height: 16.5vw;
+    z-index: 2;
+}
+
+.intro__box.shaBox {
+    left: -1.8vw;
+    top: 7vw;
+    z-index: 1;
+}
+
+.intro__subTitle {
+    position: absolute;
+    color: #fff;
+    font-size: 1.3vw;
+    letter-spacing: 0.6em;
+    font-weight: 500;
+}
+.intro__subTitle.sTop{
+    left: 26vw;
+    top: 3.6vw;
+}
+
+.intro__summ__desc {
+    color: #000000;
+    display: block;
+    font-size: 5.3vw;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 5.5vw;
+    margin-left: -0.3vw;
+}
+
+.intro__summ__desc:nth-child(2)::after{
+    content: 'DREAM';
+}
+.intro__summ__desc:nth-child(3)::after{
+    content: 'CURRENT';
+}
+.intro__summ__desc:nth-child(4)::after{
+    content: 'FUNDAMENTAL';
+}
+
+.intro__summ__desc::after{
+    color: #fff;
+    font-size: 1.2vw;
+    letter-spacing: 0.6em;
+    font-weight: 500;
+    margin-left: 1vw;
+    line-height: 0vw;
+}
+
+.intro__summ .intro__subTitle.sSumm{
+    left: 28vw;
+    top:initial;
+    bottom: 0vw;
+}
+/* //intro */
+
+/* about */
+#about {
+    height: 63vw;
+}
+#aboutArti {
+    width: 40vw;
+    position: absolute;
+    right: -2vw;
+    top: 28vw;
+    font-family: "Cafe24Ohsquareair";
+    font-weight: lighter;
+    color: #fff;
+    font-size: 1vw;
+    line-height: 160%;
+    transform: rotate(0.1deg);
+}
+#aboutArti p {
+    margin-bottom: 1vw;
+}
+#aboutArti span {
+    color: #000000;
+}
+.picture {
+    width: 28vw;
+    height: 28vw;
+    border-radius: 50%;
+    background: #fff;
+    /* top: 35vw;
+    left: 6vw; */
+    transform: translate(6vw, 35vw);
+}
+/* //about */
+
+/* skill */
+#skill {
+    position: relative;
+    height: 105vw;
+}
+
+#skill article:nth-of-type(1) {
+    position: absolute;
+    top: 30vw;
+}
+
+#skill article:nth-of-type(2) {
+    position: absolute;
+    top: 42vw;
+    left: 26vw;
+}
+
+#skill article:nth-of-type(3) {
+    position: absolute;
+    top: 55vw;
+    left: 52vw;
+}
+
+#skill article:nth-of-type(4) {
+    position: absolute;
+    top: 60vw;
+}
+
+#skill article:nth-of-type(5) {
+    position: absolute;
+    top: 72vw;
+    left: 26vw;
+}
+
+#skill article:nth-of-type(6) {
+    position: absolute;
+    top: 84vw;
+    left: 52vw;
+}
+
+#skill article:nth-of-type(7) {
+    position: absolute;
+    top: 91vw;
+}
+/* #skill #skillArti {
+    position: absolute;
+    top: 30vw;
+} */
+
+#skill #skillArti .skillT {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: "deciso";
+    font-weight: 100;
+    font-size: 5.5vw;
+    color: #000;
+}
+#skill #skillArti h3 {
+    
+}
+#skill #skillArti span{
+    z-index: -1;
+    transition: all 0.7s ease;
+}
+
+#skill #skillArti:hover span{
+    left: 0.3vw;
+    top: 0.3vw;
+}
+#skill #skillArti p {
+    position: absolute;
+    left: 0.5vw;
+    top: 8.5vw;
+    width: 21.5vw;
+    font-family: "Cafe24Ohsquareair";
+    font-weight: lighter;
+    color: #fff;
+    font-size: 1vw;
+    line-height: 160%;
+    transform: rotate(0.1deg);
+    text-align: justify;
+}
+
+.wrap #footer {}
