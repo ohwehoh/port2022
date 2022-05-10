@@ -178,7 +178,6 @@
 
 /* skill */
 #skill {
-    position: relative;
     height: 105vw;
 }
 
@@ -259,5 +258,77 @@
     transform: rotate(0.1deg);
     text-align: justify;
 }
+/* //skill */
 
+/* works */
+#works {
+    height: 100vw;
+}
+.works__summ {
+    position: relative;
+    top: 30vw;
+    left: 16.5vw;
+    color: #000;
+    letter-spacing: 0.025em;
+    line-height: 1.5vw;
+}
+
+.works__summ ul {}
+.works__summ ul span {
+    font-weight: 900;
+    font-size: 1.1vw;
+}
+.works__summ ul li {
+    font-family: 'Mohave';
+    font-weight: 400;
+    font-size: 1.1vw;
+}
+
+#worksArti,
+#worksArti h3 {
+    position: absolute;
+    font-size: 20vw;
+    font-weight: 300;
+    line-height: 0em;
+}
+#worksArti h3 {
+    position: absolute;
+    top: 20vw;left: 0;
+    color: #fff;
+    
+}
+#worksArti span {
+    position: absolute;
+    top: 21.5vw;left: 1.5vw;
+    z-index: -1;
+    font-weight: 100;
+    line-height: 0em;
+}
+
+#worksArti em {
+    position: relative;
+    font-size: 3vw;
+    top: 20vw;
+    left: 8vw;
+    color: #000;
+    font-weight: 500;
+}
+#worksArti:nth-of-type(1){
+    top: 25vw;
+    z-index: 10;
+}
+#worksArti:nth-of-type(2){
+    top: 45vw;
+    left: 23vw;
+}
+#worksArti:nth-of-type(2) em {
+    left: 13.5vw;
+}
+#worksArti:nth-of-type(3){
+    top: 35vw;
+    left: 53vw;
+}
+#worksArti:nth-of-type(3) em {
+    left: 13.5vw;
+}
 .wrap #footer {}
