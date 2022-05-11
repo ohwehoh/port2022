@@ -267,13 +267,12 @@
 .works__summ {
     position: relative;
     top: 30vw;
-    left: 16.5vw;
+    left: 28vw;
     color: #000;
     letter-spacing: 0.025em;
     line-height: 1.5vw;
 }
 
-.works__summ ul {}
 .works__summ ul span {
     font-weight: 900;
     font-size: 1.1vw;
@@ -284,51 +283,164 @@
     font-size: 1.1vw;
 }
 
-#worksArti,
-#worksArti h3 {
+/* 아티클 포지션*/
+#worksArti {
     position: absolute;
-    font-size: 20vw;
-    font-weight: 300;
-    line-height: 0em;
-}
-#worksArti h3 {
-    position: absolute;
-    top: 20vw;left: 0;
-    color: #fff;
-    
-}
-#worksArti span {
-    position: absolute;
-    top: 21.5vw;left: 1.5vw;
-    z-index: -1;
-    font-weight: 100;
-    line-height: 0em;
+    width: 30vw;
+    height: 17.7vw;
 }
 
-#worksArti em {
-    position: relative;
-    font-size: 3vw;
-    top: 20vw;
-    left: 8vw;
-    color: #000;
-    font-weight: 500;
+#worksArti .work__number {
+    font-size: 20vw;
+    font-weight: 300;
+    line-height: 0.8;
 }
+/* 아티클 위치 잡기*/
 #worksArti:nth-of-type(1){
-    top: 25vw;
-    z-index: 10;
+    top: 35vw;
+    left: -1vw;
 }
 #worksArti:nth-of-type(2){
-    top: 45vw;
-    left: 23vw;
-}
-#worksArti:nth-of-type(2) em {
-    left: 13.5vw;
+    top: 55vw;
+    left: 20vw;
 }
 #worksArti:nth-of-type(3){
-    top: 35vw;
-    left: 53vw;
+    top: 45vw;
+    left: 50vw;
 }
-#worksArti:nth-of-type(3) em {
+#worksArti:nth-of-type(4){
+    top: 75vw;
+    left: 7vw;
+}
+#worksArti:nth-of-type(5){
+    top: 70vw;
+    left: 55vw;
+}
+
+/* z-index
+h3 : 3/7
+span : 2/6
+em : 2/6
+overBox : 4/8
+workBox : 0/5 */
+
+/* h3,span,em 위치잡기/설정 */
+/* h3가 span보다 위에있어야함 */
+/* workbox가 생기면 다른 숫자,overbox들은 가려져야함 */
+/* h3, span이 workbox보다 위에있어서 마우스오버되면 위치 바뀌어야함 */
+#worksArti h3 {
+    position: absolute;
+    top: 0;left: 0;
+    color: #fff;
+    z-index: 3;
+    transition: all 0.5s;
+}
+
+#worksArti > span {
+    position: absolute;
+    top: 1.5vw;left: 1.5vw;
+    z-index: 2;
+    font-weight: 100;
+    transition: all 0.5s;
+}
+/* em은 workbox보다 위에있으면서 마우스오버되면 위치 바뀌어야함 */
+/* workbox가 생기면 다른 em은 가려져야함 */
+#worksArti em {
+    position: absolute;
+    font-size: 3vw;
+    bottom: 1vw;
     left: 13.5vw;
+    color: #000;
+    font-weight: 500;
+    z-index: 2;
+    transition: left 0.5s, top 0.5s, color 1s ease-in-out;
 }
+
+#worksArti:nth-of-type(1) em{
+    left: 8vw;
+}
+
+/* 제일 상위에 있어야함 */
+/* workbox나타나면 해당 overbox만 최상위 */
+#worksArti .overBox {
+    display: block;
+    position: absolute;
+    left: 1vw;
+    top: 1.5vw;
+    width: 11.2vw;
+    height: 15.5vw;
+    /* background-color: #fff;
+    opacity: 0.5; */
+    z-index: 4;
+}
+#worksArti:nth-of-type(1) .overBox {width: 30%;}
+
+#worksArti .workBox {
+    position: absolute;
+    width: 50vw;
+    height: 30vw;
+    background: #000;
+    opacity: 0;
+    z-index: 0;
+    transform: scale(0.9, 0.9);
+    transition: opacity 1s, transform 0.6s ease-in-out;
+}
+
+/* workBox 위치 */
+#worksArti:nth-of-type(1) .workBox {}
+#worksArti:nth-of-type(2) .workBox {top: -5vw; left: -5vw;}
+#worksArti:nth-of-type(3) .workBox {left: -20vw;}
+#worksArti:nth-of-type(5) .workBox {left: -20vw;}
+
+/* 오버박스에 마우스 올리면 워크박스 나와야함 */
+/* h3, span, em, boverBox z-index 조절 */
+#worksArti .overBox:hover ~ div.workBox {
+    opacity: 1;
+    z-index: 5;
+    transform: scale(1, 1);
+}
+/* z-index변경(hover에 해당된 article만) */
+#worksArti .overBox:hover ~ h3 {z-index: 7;}
+#worksArti .overBox:hover ~ span {z-index: 6;}
+#worksArti .overBox:hover ~ em {z-index: 6;}
+#worksArti .overBox:hover {z-index: 8;}
+
+/* h3, span, em 위치 바꾸기*/
+#worksArti .overBox:hover ~ h3 {left: 2vw; top: 35%;}
+#worksArti .overBox:hover ~ span {left: 3.5vw; top: 43%;}
+#worksArti .overBox:hover ~ em {color: #fff; left: 11.5vw; top: 36.5%;}
+
+/* workBox안 내용 */
+.workBox p {
+    font-family: "Cafe24Ohsquareair";
+    font-size: 2vw;
+    color: #fff;
+    position: absolute;
+}
+.workBox span {
+    font-size: 2vw;
+    color: #fff;
+    position: absolute;
+}
+#worksArti:nth-of-type(1) .workBox {background-image: url(../img/workBoxBg1.png);} 
+#worksArti:nth-of-type(1) .workBox p {left: 11.8vw; top: 12vw;}    
+#worksArti:nth-of-type(1) .workBox span.inBox1 {left: 11.8vw; top: 19.5vw;}
+#worksArti:nth-of-type(1) .workBox span.inBox2 {left: 23vw; top: 19.5vw;}
+
+/* workBox안에서 계속 보일 수 있게 해야함 */
+/* ... */
+
+/* #worksArti h3:hover ~ div.workBox,
+#worksArti span:hover ~ div.workBox,
+#worksArti div.workBox:hover {
+    opacity: 1;
+    z-index: 98;
+    transform: scale(1, 1);
+}
+
+#worksArti h3:hover ~ em {
+    opacity: 0;
+} */
+
+
 .wrap #footer {}
