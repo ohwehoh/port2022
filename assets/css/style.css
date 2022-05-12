@@ -1,320 +1,299 @@
 .wrap {
-    padding: 0 11vw;
+  padding: 0 11vw;
 }
 /* header */
 .wrap #header {
-    padding: 3em 0;
-    font-family: "deciso";
-    font-weight: 900;
+  padding: 3vw 0;
+  font-family: "deciso";
+  font-weight: 900;
 }
 .wrap #header #menu {
-    width: 100%;
+  width: 100%;
 }
 .wrap #header #menu ul {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .wrap #header #menu ul a {
-    display: block;
+  display: block;
 }
 .wrap #header #menu ul li a {
-    font-size: 12px;
+  font-size: 12px;
 }
 .wrap #header #menu ul li a em {
-    display: block;
-    margin-bottom: 1.2em;
-    color: #fff;
-    font-weight: 100;
+  display: block;
+  margin-bottom: 1.2em;
+  color: #fff;
+  font-weight: 100;
 }
 .wrap #header #menu ul li a em:last-child {
-    margin-bottom: 0;
-    margin-top: 2.7em;
+  margin-bottom: 0;
+  margin-top: 2.7em;
 }
 .wrap #header #menu ul li a span {
-    color: #000000;
+  color: #000000;
 }
 /* //header */
 
 /* main */
 .wrap #main {
-    margin: 10em 0;
-    width: 100%;
-    height: 100vw;
-    /* background-color: rgba(00,00,00,0.1); */
+  margin: 10vw 0;
+  width: 100%;
+  /* background-color: rgba(00,00,00,0.1); */
 }
+
+/* //main */
+
 /* intro */
 .wrap #main #intro {
-    font-family: "deciso";
+  font-family: "deciso";
 }
 .intro__title {
-    /* background-color: rgba(00,00,00,0.5); */
-    position: relative;
-    width: 100%;
-    height: 24vw;
+  /* background-color: rgba(00,00,00,0.5); */
+  position: relative;
+  width: 100%;
+  height: 24vw;
 }
 
 .intro__title .intro__title__top {
-    color: #000000;
-    font-size: 13vw;
-    font-weight: 900;
-    position: absolute;
+  color: #000000;
+  font-size: 13vw;
+  font-weight: 900;
+  position: absolute;
 }
 
 .intro__title .tTop {
-    left: -0.9vw;
-    top: -6vw;
-    z-index: 3;
+  left: -0.9vw;
+  top: -6vw;
+  z-index: 3;
 }
 
 .intro__title .tTop.sha {
-    left: 0.05vw;
-    top: -5vw;
-    z-index: 1;
-    font-weight: 500;
+  left: 0.05vw;
+  top: -5vw;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.intro__title .tTop:nth-child(1):after {
+  content: 'FRONTENDDEV';
+  color: #fff;
+  font-size: 1.2vw;
+  letter-spacing: 0.6em;
+  font-weight: 500;
+  margin-left: 1vw;
+  line-height: 0vw;
+  position: absolute;
+  top: 10.5vw; left: 26vw;
 }
 
 .intro__title .tBottom {
-    top: 5vw;
-    left: -0.9vw;
-    z-index: 3;
+  top: 5vw;
+  left: -0.9vw;
+  z-index: 3;
 }
 
 .intro__box {
-    position: absolute;
-    left: -2.8vw;
-    top: 6.2vw;
-    background-color: #fff;
-    width: 71vw;
-    height: 16.5vw;
-    z-index: 2;
+  position: absolute;
+  left: -2.8vw;
+  top: 6.2vw;
+  background-color: #fff;
+  width: 71vw;
+  height: 16.5vw;
+  z-index: 2;
 }
 
 .intro__box.shaBox {
-    left: -1.8vw;
-    top: 7vw;
-    z-index: 1;
-}
-
-.intro__subTitle {
-    position: absolute;
-    color: #fff;
-    font-size: 1.3vw;
-    letter-spacing: 0.6em;
-    font-weight: 500;
-}
-.intro__subTitle.sTop{
-    left: 26vw;
-    top: 3.6vw;
+  left: -1.8vw;
+  top: 7vw;
+  z-index: 1;
 }
 
 .intro__summ__desc {
-    color: #000000;
-    display: block;
-    font-size: 5.3vw;
-    font-weight: 900;
-    letter-spacing: -0.05em;
-    line-height: 5.5vw;
-    margin-left: -0.3vw;
+  color: #000000;
+  display: block;
+  font-size: 5.3vw;
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 5.5vw;
+  margin-left: -0.3vw;
 }
 
-.intro__summ__desc:nth-child(2)::after{
-    content: 'DREAM';
+.intro__summ__desc:nth-child(2)::after {
+  content: "DREAM";
 }
-.intro__summ__desc:nth-child(3)::after{
-    content: 'CURRENT';
+.intro__summ__desc:nth-child(3)::after {
+  content: "CURRENT";
 }
-.intro__summ__desc:nth-child(4)::after{
-    content: 'FUNDAMENTAL';
-}
-
-.intro__summ__desc::after{
-    color: #fff;
-    font-size: 1.2vw;
-    letter-spacing: 0.6em;
-    font-weight: 500;
-    margin-left: 1vw;
-    line-height: 0vw;
+.intro__summ__desc:nth-child(4)::after {
+  content: "FUNDAMENTAL";
 }
 
-.intro__summ .intro__subTitle.sSumm{
-    left: 28vw;
-    top:initial;
-    bottom: 0vw;
+.intro__summ__desc::after {
+  color: #fff;
+  font-size: 1.2vw;
+  letter-spacing: 0.6em;
+  font-weight: 500;
+  margin-left: 1vw;
+  line-height: 0vw;
 }
+
 /* //intro */
 
 /* about */
-#about {
-    height: 63vw;
+#about {}
+#aboutArti .aboutDesc {
+  width: 40vw;
+  font-family: "Cafe24Ohsquareair";
+  font-weight: lighter;
+  color: #fff;
+  font-size: 1vw;
+  line-height: 160%;
+  transform: rotate(0.1deg) translate(80%,0);
 }
-#aboutArti {
-    width: 40vw;
-    position: absolute;
-    right: -2vw;
-    top: 28vw;
-    font-family: "Cafe24Ohsquareair";
-    font-weight: lighter;
-    color: #fff;
-    font-size: 1vw;
-    line-height: 160%;
-    transform: rotate(0.1deg);
+#aboutArti .aboutDesc p {
+  margin-bottom: 1vw;
 }
-#aboutArti p {
-    margin-bottom: 1vw;
-}
-#aboutArti span {
-    color: #000000;
+#aboutArti .aboutDesc span {
+  color: #000000;
 }
 .picture {
-    width: 28vw;
-    height: 28vw;
-    border-radius: 50%;
-    background: #fff;
-    /* top: 35vw;
-    left: 6vw; */
-    transform: translate(6vw, 35vw);
+  width: 28vw;
+  height: 28vw;
+  border-radius: 50%;
+  background: #fff;
+  /* transform: translate(6vw, 35vw); */
+}
+@media (max-width:1360px){
+  #aboutArti .aboutDesc{
+    line-height: 1.5;
+  }
+  #aboutArti .aboutDesc p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:1010px){
+  #aboutArti {
+    display: flex;
+    flex-direction: column;
+  }
+  #aboutArti .aboutDesc {
+    width: 90vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #aboutArti .aboutDesc p {
+    margin-bottom: 10px;
+  }
+  .picture {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10vw;
+  }
 }
 /* //about */
 
 /* skill */
-#skill {
-    height: 105vw;
-}
+#skill {}
 
 #skill article:nth-of-type(1) {
-    position: absolute;
-    top: 30vw;
 }
 
 #skill article:nth-of-type(2) {
-    position: absolute;
-    top: 42vw;
-    left: 26vw;
 }
 
 #skill article:nth-of-type(3) {
-    position: absolute;
-    top: 55vw;
-    left: 52vw;
 }
 
 #skill article:nth-of-type(4) {
-    position: absolute;
-    top: 60vw;
 }
 
 #skill article:nth-of-type(5) {
-    position: absolute;
-    top: 72vw;
-    left: 26vw;
 }
 
 #skill article:nth-of-type(6) {
-    position: absolute;
-    top: 84vw;
-    left: 52vw;
 }
 
 #skill article:nth-of-type(7) {
-    position: absolute;
-    top: 91vw;
 }
-/* #skill #skillArti {
-    position: absolute;
-    top: 30vw;
-} */
 
 #skill #skillArti .skillT {
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-family: "deciso";
-    font-weight: 100;
-    font-size: 5.5vw;
-    color: #000;
-}
-#skill #skillArti h3 {
-    
-}
-#skill #skillArti span{
-    z-index: -1;
-    transition: all 0.7s ease;
+  font-family: "deciso";
+  font-weight: 100;
+  font-size: 5.5vw;
+  color: #000;
 }
 
-#skill #skillArti:hover span{
-    left: 0.3vw;
-    top: 0.3vw;
-}
 #skill #skillArti p {
-    position: absolute;
-    left: 0.5vw;
-    top: 8.5vw;
-    width: 21.5vw;
-    font-family: "Cafe24Ohsquareair";
-    font-weight: lighter;
-    color: #fff;
-    font-size: 1vw;
-    line-height: 160%;
-    transform: rotate(0.1deg);
-    text-align: justify;
+  width: 21.5vw;
+  font-family: "Cafe24Ohsquareair";
+  font-weight: lighter;
+  color: #fff;
+  font-size: 1vw;
+  line-height: 160%;
+  transform: rotate(0.1deg);
+  text-align: justify;
 }
+
 /* //skill */
 
 /* works */
 #works {
-    height: 100vw;
 }
 .works__summ {
-    position: relative;
-    top: 30vw;
-    left: 28vw;
-    color: #000;
-    letter-spacing: 0.025em;
-    line-height: 1.5vw;
+  position: relative;
+  top: 30vw;
+  left: 28vw;
+  color: #000;
+  letter-spacing: 0.025em;
+  line-height: 1.5vw;
 }
 
 .works__summ ul span {
-    font-weight: 900;
-    font-size: 1.1vw;
+  font-weight: 900;
+  font-size: 1.1vw;
 }
 .works__summ ul li {
-    font-family: 'Mohave';
-    font-weight: 400;
-    font-size: 1.1vw;
+  font-family: "Mohave";
+  font-weight: 400;
+  font-size: 1.1vw;
 }
 
 /* 아티클 포지션*/
 #worksArti {
-    position: absolute;
-    width: 30vw;
-    height: 17.7vw;
+  position: absolute;
+  width: 30vw;
+  height: 17.7vw;
 }
 
 #worksArti .work__number {
-    font-size: 20vw;
-    font-weight: 300;
-    line-height: 0.8;
+  font-size: 20vw;
+  font-weight: 300;
+  line-height: 0.8;
 }
 /* 아티클 위치 잡기*/
-#worksArti:nth-of-type(1){
-    top: 35vw;
-    left: -1vw;
+#worksArti:nth-of-type(1) {
+  top: 35vw;
+  left: -1vw;
 }
-#worksArti:nth-of-type(2){
-    top: 55vw;
-    left: 20vw;
+#worksArti:nth-of-type(2) {
+  top: 55vw;
+  left: 20vw;
 }
-#worksArti:nth-of-type(3){
-    top: 45vw;
-    left: 50vw;
+#worksArti:nth-of-type(3) {
+  top: 45vw;
+  left: 50vw;
 }
-#worksArti:nth-of-type(4){
-    top: 75vw;
-    left: 7vw;
+#worksArti:nth-of-type(4) {
+  top: 75vw;
+  left: 7vw;
 }
-#worksArti:nth-of-type(5){
-    top: 70vw;
-    left: 55vw;
+#worksArti:nth-of-type(5) {
+  top: 70vw;
+  left: 55vw;
 }
 
 /* z-index
@@ -329,103 +308,144 @@ workBox : 0/5 */
 /* workbox가 생기면 다른 숫자,overbox들은 가려져야함 */
 /* h3, span이 workbox보다 위에있어서 마우스오버되면 위치 바뀌어야함 */
 #worksArti h3 {
-    position: absolute;
-    top: 0;left: 0;
-    color: #fff;
-    z-index: 3;
-    transition: all 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  z-index: 3;
+  transition: all 0.5s;
 }
 
 #worksArti > span {
-    position: absolute;
-    top: 1.5vw;left: 1.5vw;
-    z-index: 2;
-    font-weight: 100;
-    transition: all 0.5s;
+  position: absolute;
+  top: 1.5vw;
+  left: 1.5vw;
+  z-index: 2;
+  font-weight: 100;
+  transition: all 0.5s;
 }
 /* em은 workbox보다 위에있으면서 마우스오버되면 위치 바뀌어야함 */
 /* workbox가 생기면 다른 em은 가려져야함 */
 #worksArti em {
-    position: absolute;
-    font-size: 3vw;
-    bottom: 1vw;
-    left: 13.5vw;
-    color: #000;
-    font-weight: 500;
-    z-index: 2;
-    transition: left 0.5s, top 0.5s, color 1s ease-in-out;
+  position: absolute;
+  font-size: 3vw;
+  bottom: 1vw;
+  left: 13.5vw;
+  color: #000;
+  font-weight: 500;
+  z-index: 2;
+  transition: left 0.5s, top 0.5s, color 1s ease-in-out;
 }
 
-#worksArti:nth-of-type(1) em{
-    left: 8vw;
+#worksArti:nth-of-type(1) em {
+  left: 8vw;
 }
 
 /* 제일 상위에 있어야함 */
 /* workbox나타나면 해당 overbox만 최상위 */
 #worksArti .overBox {
-    display: block;
-    position: absolute;
-    left: 1vw;
-    top: 1.5vw;
-    width: 11.2vw;
-    height: 15.5vw;
-    /* background-color: #fff;
+  display: block;
+  position: absolute;
+  left: 1vw;
+  top: 1.5vw;
+  width: 11.2vw;
+  height: 15.5vw;
+  /* background-color: #fff;
     opacity: 0.5; */
-    z-index: 4;
+  z-index: 4;
 }
-#worksArti:nth-of-type(1) .overBox {width: 30%;}
+#worksArti:nth-of-type(1) .overBox {
+  width: 30%;
+}
 
 #worksArti .workBox {
-    position: absolute;
-    width: 50vw;
-    height: 30vw;
-    background: #000;
-    opacity: 0;
-    z-index: 0;
-    transform: scale(0.9, 0.9);
-    transition: opacity 1s, transform 0.6s ease-in-out;
+  position: absolute;
+  width: 50vw;
+  height: 30vw;
+  background: #000;
+  opacity: 0;
+  z-index: 0;
+  transform: scale(0.9, 0.9);
+  transition: opacity 1s, transform 0.6s ease-in-out;
 }
 
 /* workBox 위치 */
-#worksArti:nth-of-type(1) .workBox {}
-#worksArti:nth-of-type(2) .workBox {top: -5vw; left: -5vw;}
-#worksArti:nth-of-type(3) .workBox {left: -20vw;}
-#worksArti:nth-of-type(5) .workBox {left: -20vw;}
+#worksArti:nth-of-type(1) .workBox {
+}
+#worksArti:nth-of-type(2) .workBox {
+  top: -5vw;
+  left: -5vw;
+}
+#worksArti:nth-of-type(3) .workBox {
+  left: -20vw;
+}
+#worksArti:nth-of-type(5) .workBox {
+  left: -20vw;
+}
 
 /* 오버박스에 마우스 올리면 워크박스 나와야함 */
 /* h3, span, em, boverBox z-index 조절 */
 #worksArti .overBox:hover ~ div.workBox {
-    opacity: 1;
-    z-index: 5;
-    transform: scale(1, 1);
+  opacity: 1;
+  z-index: 5;
+  transform: scale(1, 1);
 }
 /* z-index변경(hover에 해당된 article만) */
-#worksArti .overBox:hover ~ h3 {z-index: 7;}
-#worksArti .overBox:hover ~ span {z-index: 6;}
-#worksArti .overBox:hover ~ em {z-index: 6;}
-#worksArti .overBox:hover {z-index: 8;}
+#worksArti .overBox:hover ~ h3 {
+  z-index: 7;
+}
+#worksArti .overBox:hover ~ span {
+  z-index: 6;
+}
+#worksArti .overBox:hover ~ em {
+  z-index: 6;
+}
+#worksArti .overBox:hover {
+  z-index: 8;
+}
 
 /* h3, span, em 위치 바꾸기*/
-#worksArti .overBox:hover ~ h3 {left: 2vw; top: 35%;}
-#worksArti .overBox:hover ~ span {left: 3.5vw; top: 43%;}
-#worksArti .overBox:hover ~ em {color: #fff; left: 11.5vw; top: 36.5%;}
+#worksArti .overBox:hover ~ h3 {
+  left: 2vw;
+  top: 35%;
+}
+#worksArti .overBox:hover ~ span {
+  left: 3.5vw;
+  top: 43%;
+}
+#worksArti .overBox:hover ~ em {
+  color: #fff;
+  left: 11.5vw;
+  top: 36.5%;
+}
 
 /* workBox안 내용 */
 .workBox p {
-    font-family: "Cafe24Ohsquareair";
-    font-size: 2vw;
-    color: #fff;
-    position: absolute;
+  font-family: "Cafe24Ohsquareair";
+  font-size: 2vw;
+  color: #fff;
+  position: absolute;
 }
 .workBox span {
-    font-size: 2vw;
-    color: #fff;
-    position: absolute;
+  font-size: 2vw;
+  color: #fff;
+  position: absolute;
 }
-#worksArti:nth-of-type(1) .workBox {background-image: url(../img/workBoxBg1.png);} 
-#worksArti:nth-of-type(1) .workBox p {left: 11.8vw; top: 12vw;}    
-#worksArti:nth-of-type(1) .workBox span.inBox1 {left: 11.8vw; top: 19.5vw;}
-#worksArti:nth-of-type(1) .workBox span.inBox2 {left: 23vw; top: 19.5vw;}
+#worksArti:nth-of-type(1) .workBox {
+  background-image: url(../img/workBoxBg1.png);
+}
+#worksArti:nth-of-type(1) .workBox p {
+  left: 11.8vw;
+  top: 12vw;
+}
+#worksArti:nth-of-type(1) .workBox span.inBox1 {
+  left: 11.8vw;
+  top: 19.5vw;
+}
+#worksArti:nth-of-type(1) .workBox span.inBox2 {
+  left: 23vw;
+  top: 19.5vw;
+}
 
 /* workBox안에서 계속 보일 수 있게 해야함 */
 /* ... */
@@ -442,5 +462,5 @@ workBox : 0/5 */
     opacity: 0;
 } */
 
-
-.wrap #footer {}
+.wrap #footer {
+}
