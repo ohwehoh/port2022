@@ -76,7 +76,7 @@
 }
 
 .intro__title .tTop:nth-child(1):after {
-  content: 'FRONTENDDEV';
+  content: "FRONTENDDEV";
   color: #fff;
   font-size: 1.2vw;
   letter-spacing: 0.6em;
@@ -84,7 +84,8 @@
   margin-left: 1vw;
   line-height: 0vw;
   position: absolute;
-  top: 10.5vw; left: 26vw;
+  top: 10.5vw;
+  left: 26vw;
 }
 
 .intro__title .tBottom {
@@ -141,7 +142,8 @@
 /* //intro */
 
 /* about */
-#about {}
+#about {
+}
 #aboutArti .aboutDesc {
   width: 40vw;
   font-family: "Cafe24Ohsquareair";
@@ -149,7 +151,7 @@
   color: #fff;
   font-size: 1vw;
   line-height: 160%;
-  transform: rotate(0.1deg) translate(80%,0);
+  transform: rotate(0.1deg) translate(80%, 0);
 }
 #aboutArti .aboutDesc p {
   margin-bottom: 1vw;
@@ -162,10 +164,12 @@
   height: 28vw;
   border-radius: 50%;
   background: #fff;
-  /* transform: translate(6vw, 35vw); */
+  /* background-image: url(../img/aboutme1.png); */
+  background-position: center center;
+  background-size: cover;
 }
-@media (max-width:1360px){
-  #aboutArti .aboutDesc{
+@media (max-width: 1360px) {
+  #aboutArti .aboutDesc {
     line-height: 1.5;
   }
   #aboutArti .aboutDesc p {
@@ -173,7 +177,7 @@
   }
 }
 
-@media (max-width:1010px){
+@media (max-width: 1010px) {
   #aboutArti {
     display: flex;
     flex-direction: column;
@@ -197,37 +201,115 @@
 /* //about */
 
 /* skill */
-#skill {}
-
-#skill article:nth-of-type(1) {
+#skill {
+  font-size: 0.1vw;
 }
 
-#skill article:nth-of-type(2) {
+#skill .skillWrap {
+  display: grid;
+  grid-template-areas:
+    "html div1 div2"
+    "html css div3"
+    "div4 css javascript"
+    "div5 div6 javascript"
+    "jquery div7 javascript"
+    "jquery div8 div9"
+    "jquery php div10"
+    "div11 php mysql"
+    "div12 div13 mysql"
+    "react div14 mysql"
+    "react div15 div16";
+  grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  grid-template-rows: 70em 70em 70em 35em 35em 35em 70em 70em 35em 35em 105em;
 }
 
-#skill article:nth-of-type(3) {
+.html {
+  grid-area: html;
+}
+.css {
+  grid-area: css;
+}
+.javascript {
+  grid-area: javascript;
+}
+.jquery {
+  grid-area: jquery;
+}
+.php {
+  grid-area: php;
+}
+.mysql {
+  grid-area: mysql;
+}
+.react {
+  grid-area: react;
 }
 
-#skill article:nth-of-type(4) {
+.div1 {
+  grid-area: div1;
+}
+.div2 {
+  grid-area: div2;
+}
+.div3 {
+  grid-area: div3;
+}
+.div4 {
+  grid-area: div4;
+}
+.div5 {
+  grid-area: div5;
+}
+.div6 {
+  grid-area: div6;
+}
+.div7 {
+  grid-area: div7;
+}
+.div8 {
+  grid-area: div8;
+}
+.div9 {
+  grid-area: div9;
+}
+.div10 {
+  grid-area: div10;
+}
+.div11 {
+  grid-area: div11;
+}
+.div12 {
+  grid-area: div12;
+}
+.div13 {
+  grid-area: div13;
+}
+.div14 {
+  grid-area: div14;
+}
+.div15 {
+  grid-area: div15;
+}
+.div16 {
+  grid-area: div16;
 }
 
-#skill article:nth-of-type(5) {
-}
-
-#skill article:nth-of-type(6) {
-}
-
-#skill article:nth-of-type(7) {
-}
-
-#skill #skillArti .skillT {
+#skill .skillWrap #skillArti .skillT {
   font-family: "deciso";
   font-weight: 100;
-  font-size: 5.5vw;
+  font-size: 50em;
   color: #000;
+  position: relative;
 }
 
-#skill #skillArti p {
+.skillT::before {
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  color: #e05057;
+}
+
+#skill .skillWrap #skillArti p {
   width: 21.5vw;
   font-family: "Cafe24Ohsquareair";
   font-weight: lighter;
@@ -238,6 +320,62 @@
   text-align: justify;
 }
 
+@media (max-width: 1340px) {
+  #skill .skillWrap #skillArti p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1020px) {
+  #skill .skillWrap {
+    grid-template-areas:
+      "html div1"
+      "html css"
+      "div2 css"
+      "javascript css"
+      "javascript div3"
+      "javascript jquery"
+      "div4 jquery"
+      "php jquery"
+      "php div5"
+      "php mysql"
+      "div6 mysql"
+      "react mysql"
+      "react div";
+    grid-template-columns: calc(100% / 2) calc(100% / 2);
+    grid-template-rows: 100em 100em 50em 50em 50em 100em 50em 50em 50em 100em 50em 50em 150em;
+  }
+
+  #skill .skillWrap #skillArti p {
+    width: 95%;
+  }
+}
+
+@media (max-width: 800px) {
+  #skill .skillWrap {
+    grid-template-rows: 100px 100px 50px 50px 50px 100px 50px 50px 50px 100px 50px 50px 150px;
+  }
+}
+
+@media (max-width: 510px) {
+  #skill .skillWrap {
+    grid-template-areas:
+      "html"
+      "css"
+      "javascript"
+      "jquery"
+      "php "
+      "mysql"
+      "react";
+    align-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: initial;
+  }
+
+  #skillArti {
+    margin-bottom: 5vw;
+  }
+}
 /* //skill */
 
 /* works */
@@ -245,8 +383,7 @@
 }
 .works__summ {
   position: relative;
-  top: 30vw;
-  left: 28vw;
+  left: 15vw;
   color: #000;
   letter-spacing: 0.025em;
   line-height: 1.5vw;
@@ -264,9 +401,9 @@
 
 /* 아티클 포지션*/
 #worksArti {
-  position: absolute;
   width: 30vw;
   height: 17.7vw;
+  position: relative;
 }
 
 #worksArti .work__number {
@@ -276,24 +413,21 @@
 }
 /* 아티클 위치 잡기*/
 #worksArti:nth-of-type(1) {
-  top: 35vw;
-  left: -1vw;
 }
 #worksArti:nth-of-type(2) {
-  top: 55vw;
-  left: 20vw;
+  margin-left: 20vw;
 }
 #worksArti:nth-of-type(3) {
-  top: 45vw;
-  left: 50vw;
+  margin-top: -30vw;
+  margin-left: 50vw;
 }
 #worksArti:nth-of-type(4) {
-  top: 75vw;
-  left: 7vw;
+  margin-top: 16vw;
+  margin-left: 7vw;
 }
 #worksArti:nth-of-type(5) {
-  top: 70vw;
-  left: 55vw;
+  margin-top: -20vw;
+  margin-left: 55vw;
 }
 
 /* z-index
@@ -308,22 +442,37 @@ workBox : 0/5 */
 /* workbox가 생기면 다른 숫자,overbox들은 가려져야함 */
 /* h3, span이 workbox보다 위에있어서 마우스오버되면 위치 바뀌어야함 */
 #worksArti h3 {
-  position: absolute;
-  top: 0;
-  left: 0;
   color: #fff;
-  z-index: 3;
   transition: all 0.5s;
+  position: relative;
+  z-index: 3;
 }
 
-#worksArti > span {
+#worksArti h3:before {
   position: absolute;
+  color: #e05057;
   top: 1.5vw;
   left: 1.5vw;
-  z-index: 2;
+  z-index: -1;
   font-weight: 100;
-  transition: all 0.5s;
 }
+
+#worksArti:nth-of-type(1) h3:before {
+  content: "1";
+}
+#worksArti:nth-of-type(2) h3:before {
+  content: "2";
+}
+#worksArti:nth-of-type(3) h3:before {
+  content: "3";
+}
+#worksArti:nth-of-type(4) h3:before {
+  content: "4";
+}
+#worksArti:nth-of-type(5) h3:before {
+  content: "5";
+}
+
 /* em은 workbox보다 위에있으면서 마우스오버되면 위치 바뀌어야함 */
 /* workbox가 생기면 다른 em은 가려져야함 */
 #worksArti em {
@@ -334,7 +483,6 @@ workBox : 0/5 */
   color: #000;
   font-weight: 500;
   z-index: 2;
-  transition: left 0.5s, top 0.5s, color 1s ease-in-out;
 }
 
 #worksArti:nth-of-type(1) em {
@@ -360,27 +508,28 @@ workBox : 0/5 */
 
 #worksArti .workBox {
   position: absolute;
+  left: 0;
+  top: 0;
   width: 50vw;
   height: 30vw;
   background: #000;
   opacity: 0;
   z-index: 0;
   transform: scale(0.9, 0.9);
-  transition: opacity 1s, transform 0.6s ease-in-out;
 }
 
 /* workBox 위치 */
 #worksArti:nth-of-type(1) .workBox {
 }
 #worksArti:nth-of-type(2) .workBox {
-  top: -5vw;
-  left: -5vw;
+  /* top: -5vw;
+  left: -5vw; */
 }
 #worksArti:nth-of-type(3) .workBox {
   left: -20vw;
 }
 #worksArti:nth-of-type(5) .workBox {
-  left: -20vw;
+  /* left: -20vw; */
 }
 
 /* 오버박스에 마우스 올리면 워크박스 나와야함 */
