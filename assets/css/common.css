@@ -11,6 +11,16 @@ body {
   background-color: #e05057 !important;
 }
 
+section {position: relative;}
+section#about {z-index: ;}
+section#skill {position: relative;}
+section#works {position: relative;}
+section#script {position: relative;}
+section#game {position: relative;}
+section#contact {position: relative;}
+
+
+
 /* section 타이틀 */
 section.cont {
   min-height: 40vw;

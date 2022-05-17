@@ -1,287 +1,400 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LYWPORTFOLIO</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/common.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <!-- <h1 class="ir_so">이연우의 포트폴리오 사이트입니다.</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LYWPORTFOLIO</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/fonts.css" />
+  <link rel="stylesheet" href="assets/css/reset.css" />
+  <link rel="stylesheet" href="assets/css/common.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- <h1 class="ir_so">이연우의 포트폴리오 사이트입니다.</h1>
     <div id="skip">
         <a href="#contents">컨텐츠 바로가기</a>
     </div> -->
-    <div class="wrap">
-      <header id="header">
-        <menu id="menu">
+  <div class="wrap">
+    <header id="header">
+      <menu id="menu">
+        <ul>
+          <li>
+            <a href="#"><em>01</em><span>about me</span></a>
+          </li>
+          <li>
+            <a href="#"><em>02</em><span>skill</span></a>
+          </li>
+          <li>
+            <a href="#"><em>03</em><span>works</span></a>
+          </li>
+          <li>
+            <a href="#"><em>04</em><span>script</span></a>
+          </li>
+          <li>
+            <a href="#"><em>05</em><span>game</span></a>
+          </li>
+          <li>
+            <a href="#"><em>06</em><span>contact</span></a>
+          </li>
+          <li>
+            <a href="#"><em>github</em></a>
+          </li>
+        </ul>
+      </menu>
+    </header>
+    <main id="main">
+      <section id="intro">
+        <div class="intro__title">
+          <span class="intro__title__top tTop">LYW</span>
+          <span class="intro__title__top tTop sha">LYW</span>
+          <span class="intro__title__top tBottom">PORTFOLIO</span>
+          <!-- <em class="intro__subTitle sTop">FRONTENDDEV</em> -->
+          <div class="intro__box"></div>
+          <div class="intro__box shaBox"></div>
+        </div>
+        <div class="intro__summ">
+          <span class="intro__summ__desc">FRONT-END</span>
+          <span class="intro__summ__desc">DEVELOPER</span>
+          <span class="intro__summ__desc">STUDY HARD</span>
+          <span class="intro__summ__desc">CONFIDENCE</span>
+        </div>
+      </section>
+      <!-- //intro -->
+
+      <!-- about -->
+      <section id="about" class="cont">
+        <div class="title">
+          <h2>ABOUT</h2>
+        </div>
+
+        <article id="aboutArti">
+          <div class="aboutDesc">
+            <p>
+              안녕하세요? 저는 프론트엔드 개발자를 꿈꾸는
+              <span>이연우</span>입니다.
+              컴퓨터공학을 전공하고, 2019년에 졸업하였습니다. 적성에 맞는 직업을
+              찾고자
+              먼 길을 돌아 2021년 말 부터 프론트엔드 학원을 다니기 시작하였고
+              이제 정착할 곳을 찾았습니다.
+            </p>
+            <p>
+              6개월 동안 기초부터 차근차근 공부하다보니 머릿속에 흐릿하게
+              떠다니던 지식들이
+              정리되면서 웹 개발 공부에 더욱 흥미가 생기고 <span>자신감</span>도
+              생겼습니다.
+              그리고 프로젝트를 할 때 기초 지식에 살을 붙여가며 제가 생각한
+              기능들을 하나씩
+              구현하데 큰 재미를 느껴 이 분야로 평생 먹고 살고 싶다는 생각이
+              들었습니다.
+            </p>
+            <p>
+              긴 취업 준비 생활로 자신감이 많이 하락 한 상태였는데 교육을 받으며
+              열정적으로
+              변한 스스로에게 자신감이 생겼습니다. 이 자신감을 바탕으로 더욱
+              자신감을 잃지 않게
+              노력하는 <span>프론트엔드 개발자</span>가 되고싶습니다.
+            </p>
+          </div>
+          <div class="picture"></div>
+        </article>
+      </section>
+      <!-- //about -->
+
+      <!-- skill -->
+      <section id="skill" class="cont">
+        <div class="title">
+          <h2>SKILL</h2>
+        </div>
+        <div class="skillWrap">
+          <article id="skillArti" class="html">
+            <h3 class="skillT">HTML</h3>
+            <p>
+              웹표준과 웹접근성을 준수한 마크업을 할수 있으며 깔끔한 코드 정리를
+              통해 누가봐도 읽기 쉬운 코드로 작성이 가능합니다. 최근 HTML5
+              시멘틱 태그를 용도에 맞게 적재적소 사용하여 하드코딩이 가능하며
+              크로스 브라우징에 대해 이해하고 있습니다.
+            </p>
+          </article>
+          <div class="div1"></div>
+          <div class="div2"></div>
+          <article id="skillArti" class="css">
+            <h3 class="skillT">CSS</h3>
+            <p>
+              CSS의 각종 속성을 적절하게 사용하며 IR기법이나 이미지
+              스프라이트등과 같은 최신의 CSS트렌드를 항상 주의깊게 지켜보고
+              있습니다. 트랜지션과 트랜스폼, 키프레임을 이용해 간단한
+              애니메이션을 만들 수 있습니다. 그리고 항상 코드의 재활용에 대해
+              고민합니다.
+            </p>
+          </article>
+          <div class="div3"></div>
+          <div class="div4"></div>
+          <article id="skillArti" class="javascript">
+            <h3 class="skillT">JAVASCRIPT</h3>
+            <p>
+              슬라이드나 갤러리와 같은 플러그인의 옵션을 잘 활용하고 디자인에
+              맞게 적용 할 수 있습니다. 탭메뉴나 레이어팝업과 같은 페이지를
+              구성할 때 자주쓰이는 것들을 스크립트를 사용하여 구현합니다.
+            </p>
+          </article>
+          <div class="div5"></div>
+          <div class="div6"></div>
+          <article id="skillArti" class="jquery">
+            <h3 class="skillT">JQUERY</h3>
+            <p>
+              스크립트가 데이터베이스와 연동이 필요할 때 주로 사용하였습니다.
+              구현에 필요한 예제를 보고 응용하여 작업 할 수 있습니다. 제이쿼리로
+              게시판의 좋아요, 회원가입 유효성 검사를 구현한 경험이 있습니다.
+            </p>
+          </article>
+          <div class="div7"></div>
+          <div class="div8"></div>
+          <div class="div9"></div>
+          <article id="skillArti" class="php">
+            <h3 class="skillT">PHP</h3>
+            <p>
+              PHP 프로젝트 수업을 듣고 응용하여 팀 프로젝트에 적용하면서
+              익혔습니다. PHP를 활용하여 온라인 게시판/블로그 등의 기능을 구현한
+              경험이 있습니다.
+            </p>
+          </article>
+          <div class="div10"></div>
+          <div class="div11"></div>
+          <article id="skillArti" class="mysql">
+            <h3 class="skillT">MYSQL</h3>
+            <p>
+              php사이트 만들기 수업을 듣고 팀 프로젝트에 적용하면서
+              데이터베이스의 테이블에서 원하는 데이터를 조회하고 수정하고 삭제
+              할 수 있는 쿼리문을 작성할 수 있게 되었습니다. 현재 SQLD자격증을
+              공부중입니다.
+            </p>
+          </article>
+          <div class="div12"></div>
+          <div class="div13"></div>
+          <article id="skillArti" class="react">
+            <h3 class="skillT">REACT</h3>
+            <p>
+              REACT를 통하여 프레임워크를 사용해봤습니다. 싱글페이지의 구성과
+              데이터의 흐름을 완벽하게 이해하고 이를 응용하여 react 사이트를
+              만든 경험이 있습니다.
+            </p>
+          </article>
+          <div class="div14"></div>
+          <div class="div15"></div>
+          <div class="div16"></div>
+        </div>
+      </section>
+      <!-- //skill -->
+
+      <section id="works" class="cont">
+        <div class="title">
+          <h2>WORKS</h2>
+        </div>
+        <div class="works__summ">
           <ul>
-            <li>
-              <a href="#"><em>01</em><span>about me</span></a>
-            </li>
-            <li>
-              <a href="#"><em>02</em><span>skill</span></a>
-            </li>
-            <li>
-              <a href="#"><em>03</em><span>works</span></a>
-            </li>
-            <li>
-              <a href="#"><em>04</em><span>script</span></a>
-            </li>
-            <li>
-              <a href="#"><em>05</em><span>game</span></a>
-            </li>
-            <li>
-              <a href="#"><em>06</em><span>contact</span></a>
-            </li>
-            <li>
-              <a href="#"><em>github</em></a>
-            </li>
+            <span>5 projects</span>
+            <li>webstandard</li>
+            <li>phpSITE</li>
+            <li>ManBeauty</li>
+            <li>reactprotfolio</li>
+            <li>musicSITE</li>
           </ul>
-        </menu>
-      </header>
-      <main id="main">
-        <section id="intro">
-          <div class="intro__title">
-            <span class="intro__title__top tTop">LYW</span>
-            <span class="intro__title__top tTop sha">LYW</span>
-            <span class="intro__title__top tBottom">PORTFOLIO</span>
-            <!-- <em class="intro__subTitle sTop">FRONTENDDEV</em> -->
-            <div class="intro__box"></div>
-            <div class="intro__box shaBox"></div>
-          </div>
-          <div class="intro__summ">
-            <span class="intro__summ__desc">FRONT-END</span>
-            <span class="intro__summ__desc">DEVELOPER</span>
-            <span class="intro__summ__desc">STUDY HARD</span>
-            <span class="intro__summ__desc">CONFIDENCE</span>
-          </div>
-        </section>
-        <!-- //intro -->
+        </div>
 
-        <!-- about -->
-        <section id="about" class="cont">
-          <div class="title">
-            <h2>ABOUT</h2>
+        <article id="worksArti">
+          <div class="overBox"></div>
+          <h3 class="work__number">1</h3>
+          <em>webstandard</em>
+          <div class="workBox">
+            <div class="close">X</div>
+            <p>웹표준을 준수한 사이트입니다.</p>
+            <a href="#"><span class="inBox1">visit site</span></a>
+            <span class="inBox2">over view</span>
           </div>
+        </article>
+        <article id="worksArti">
+          <div class="overBox"></div>
+          <h3 class="work__number">2</h3>
+          <em>phpSITE</em>
+          <div class="workBox">
+            <div class="close">X</div>
+            <p>PHP로 만든 커뮤니티 사이트입니다.</p>
+            <a href="#"><span class="inBox1">visit site</span></a>
+            <span class="inBox2">over view</span>
+          </div>
+        </article>
+        <article id="worksArti">
+          <div class="overBox"></div>
+          <h3 class="work__number">3</h3>
+          <em>ManBeauty</em>
+          <div class="workBox">
+            <div class="close">X</div>
+            <p>PHP로 만든 커뮤니티 사이트입니다.</p>
+            <a href="#"><span class="inBox1">visit site</span></a>
+            <span class="inBox2">over view</span>
+          </div>
+        </article>
+        <article id="worksArti">
+          <div class="overBox"></div>
+          <h3 class="work__number">4</h3>
+          <em>ReactSITE</em>
+          <div class="workBox">
+            <div class="close">X</div>
+            <p>PHP로 만든 커뮤니티 사이트입니다.</p>
+            <a href="#"><span class="inBox1">visit site</span></a>
+            <span class="inBox2">over view</span>
+          </div>
+        </article>
+        <article id="worksArti">
+          <div class="overBox"></div>
+          <h3 class="work__number">5</h3>
+          <em>musicSITE</em>
+          <div class="workBox">
+            <div class="close">X</div>
+            <p>PHP로 만든 커뮤니티 사이트입니다.</p>
+            <a href="#"><span class="inBox1">visit site</span></a>
+            <span class="inBox2">over view</span>
+          </div>
+        </article>
+      </section>
+      <!-- //works -->
 
-          <article id="aboutArti">
-            <div class="aboutDesc">
-              <p>
-                안녕하세요? 저는 프론트엔드 개발자를 꿈꾸는
-                <span>이연우</span>입니다.
-                컴퓨터공학을 전공하고, 2019년에 졸업하였습니다. 적성에 맞는 직업을
-                찾고자
-                먼 길을 돌아 2021년 말 부터 프론트엔드 학원을 다니기 시작하였고
-                이제 정착할 곳을 찾았습니다.
-              </p>
-              <p>
-                6개월 동안 기초부터 차근차근 공부하다보니 머릿속에 흐릿하게
-                떠다니던 지식들이
-                정리되면서 웹 개발 공부에 더욱 흥미가 생기고 <span>자신감</span>도
-                생겼습니다.
-                그리고 프로젝트를 할 때 기초 지식에 살을 붙여가며 제가 생각한
-                기능들을 하나씩
-                구현하데 큰 재미를 느껴 이 분야로 평생 먹고 살고 싶다는 생각이
-                들었습니다.
-              </p>
-              <p>
-                긴 취업 준비 생활로 자신감이 많이 하락 한 상태였는데 교육을 받으며
-                열정적으로
-                변한 스스로에게 자신감이 생겼습니다. 이 자신감을 바탕으로 더욱
-                자신감을 잃지 않게
-                노력하는 <span>프론트엔드 개발자</span>가 되고싶습니다.
-              </p>
+      <section id="script" class="cont">
+        <div class="title">
+          <h2>SCRIPT</h2>
+        </div>
+        <article id="MOUSE">
+          <div class="ribbon">
+            <span>MOUSE EFFECT</span>
+            <span>MOUSE EFFECT</span>
+            <span>MOUSE EFFECT</span>
+            <span>MOUSE EFFECT</span>
+          </div>
+          <div class="effectWrap">
+            <div class="window"></div>
+            <div class="window"></div>
+            <span>visit site</span>
+            <p>자바스크립트의 mosemove 이벤트와
+              offset메소드로 다양한 마우스 효과를
+              나타내었습니다.</p>
+          </div>
+        </article>
+        <article id="PARALLAX">
+          <div class="ribbon">
+            <span>PARALLAX EFFECT</span>
+            <span>PARALLAX EFFECT</span>
+            <span>PARALLAX EFFECT</span>
+          </div>
+          <div class="effectWrap">
+            <div class="window">
+              <iframe src="https://ohwehoh.github.io/webs_class/javascript/effect/parallaxEffect01.html" frameborder="0" width="100%" height="100%"></iframe>
             </div>
-            <div class="picture"></div>
-          </article>
-        </section>
-        <!-- //about -->
-
-        <!-- skill -->
-        <section id="skill" class="cont">
-          <div class="title">
-            <h2>SKILL</h2>
-          </div>
-          <div class="skillWrap">
-            <article id="skillArti" class="html">
-              <h3 class="skillT">HTML</h3>
-              <p>
-                웹표준과 웹접근성을 준수한 마크업을 할수 있으며 깔끔한 코드 정리를
-                통해 누가봐도 읽기 쉬운 코드로 작성이 가능합니다. 최근 HTML5
-                시멘틱 태그를 용도에 맞게 적재적소 사용하여 하드코딩이 가능하며
-                크로스 브라우징에 대해 이해하고 있습니다.
-              </p>
-            </article>
-            <div class="div1"></div>
-            <div class="div2"></div>
-            <article id="skillArti" class="css">
-              <h3 class="skillT">CSS</h3>
-              <p>
-                CSS의 각종 속성을 적절하게 사용하며 IR기법이나 이미지
-                스프라이트등과 같은 최신의 CSS트렌드를 항상 주의깊게 지켜보고
-                있습니다. 트랜지션과 트랜스폼, 키프레임을 이용해 간단한
-                애니메이션을 만들 수 있습니다. 그리고 항상 코드의 재활용에 대해
-                고민합니다.
-              </p>
-            </article>
-            <div class="div3"></div>
-            <div class="div4"></div>
-            <article id="skillArti" class="javascript">
-              <h3 class="skillT">JAVASCRIPT</h3>
-              <p>
-                슬라이드나 갤러리와 같은 플러그인의 옵션을 잘 활용하고 디자인에
-                맞게 적용 할 수 있습니다. 탭메뉴나 레이어팝업과 같은 페이지를
-                구성할 때 자주쓰이는 것들을 스크립트를 사용하여 구현합니다.
-              </p>
-            </article>
-            <div class="div5"></div>
-            <div class="div6"></div>
-            <article id="skillArti" class="jquery">
-              <h3 class="skillT">JQUERY</h3>
-              <p>
-                스크립트가 데이터베이스와 연동이 필요할 때 주로 사용하였습니다.
-                구현에 필요한 예제를 보고 응용하여 작업 할 수 있습니다. 제이쿼리로
-                게시판의 좋아요, 회원가입 유효성 검사를 구현한 경험이 있습니다.
-              </p>
-            </article>
-            <div class="div7"></div>
-            <div class="div8"></div>
-            <div class="div9"></div>
-            <article id="skillArti" class="php">
-              <h3 class="skillT">PHP</h3>
-              <p>
-                PHP 프로젝트 수업을 듣고 응용하여 팀 프로젝트에 적용하면서
-                익혔습니다. PHP를 활용하여 온라인 게시판/블로그 등의 기능을 구현한
-                경험이 있습니다.
-              </p>
-            </article>
-            <div class="div10"></div>
-            <div class="div11"></div>
-            <article id="skillArti" class="mysql">
-              <h3 class="skillT">MYSQL</h3>
-              <p>
-                php사이트 만들기 수업을 듣고 팀 프로젝트에 적용하면서
-                데이터베이스의 테이블에서 원하는 데이터를 조회하고 수정하고 삭제
-                할 수 있는 쿼리문을 작성할 수 있게 되었습니다. 현재 SQLD자격증을
-                공부중입니다.
-              </p>
-            </article>
-            <div class="div12"></div>
-            <div class="div13"></div>
-            <article id="skillArti" class="react">
-              <h3 class="skillT">REACT</h3>
-              <p>
-                REACT를 통하여 프레임워크를 사용해봤습니다. 싱글페이지의 구성과
-                데이터의 흐름을 완벽하게 이해하고 이를 응용하여 react 사이트를
-                만든 경험이 있습니다.
-              </p>
-            </article>
-            <div class="div14"></div>
-            <div class="div15"></div>
-            <div class="div16"></div>
-          </div>
-        </section>
-        <!-- //skill -->
-
-        <section id="works" class="cont">
-          <div class="title">
-            <h2>WORKS</h2>
-          </div>
-          <div class="works__summ">
-            <ul>
-              <span>5 projects</span>
-              <li>webstandard</li>
-              <li>phpSITE</li>
-              <li>ManBeauty</li>
-              <li>reactprotfolio</li>
-              <li>musicSITE</li>
-            </ul>
-          </div>
-          
-          <article id="worksArti">
-            <div class="overBox"></div>
-            <h3 class="work__number">1</h3>
-            <em>webstandard</em>
-            <div class="workBox">
-              <p>웹표준을 준수한 사이트입니다.</p>
-              <a href="#"><span class="inBox1">visit site</span></a>
-              <span class="inBox2">over view</span>
+            <div class="window">
+              <iframe src="https://ohwehoh.github.io/webs_class/javascript/effect/parallaxEffect02.html" frameborder="0" width="100%" height="100%"></iframe>
             </div>
-          </article>
-          <article id="worksArti">
-            <div class="overBox"></div>
-            <h3 class="work__number">2</h3>
-            <em>phpSITE</em>
-            <div class="workBox">
-              <p>PHP로 만든 커뮤니티 사이트입니다.</p>
-              <span class="inBox1">visit site</span>
-              <span class="inBox2">over view</span>
-            </div>
-          </article>
-          <article id="worksArti">
-            <div class="overBox"></div>
-            <h3 class="work__number">3</h3>
-            <em>ManBeauty</em>
-            <div class="workBox">
-              <p>PHP로 만든 커뮤니티 사이트입니다.</p>
-              <span>visit site</span>
-              <span>over view</span>
-            </div>
-          </article>
-          <article id="worksArti">
-            <div class="overBox"></div>
-            <h3 class="work__number">4</h3>
-            <em>ReactSITE</em>
-            <div class="workBox">
-              <p>PHP로 만든 커뮤니티 사이트입니다.</p>
-              <span>visit site</span>
-              <span>over view</span>
-            </div>
-          </article>
-          <article id="worksArti">
-            <div class="overBox"></div>
-            <h3 class="work__number">5</h3>
-            <em>musicSITE</em>
-            <div class="workBox">
-              <p>PHP로 만든 커뮤니티 사이트입니다.</p>
-              <span>visit site</span>
-              <span>over view</span>
-            </div>
-          </article>
-        </section>
-        <!-- //works -->
-
-        <section id="script" class="cont">
-          <div class="title">
-            <h2>SCRIPT</h2>
+            <span>visit site</span>
+            <p>자바스크립트의 mosemove 이벤트와
+              offset메소드로 다양한 마우스 효과를
+              나타내었습니다.</p>
           </div>
-        </section>
-        <!-- //script -->
-
-        <section id="game" class="cont">
-          <div class="title">
-            <h2>GAME</h2>
+        </article>
+        <article id="QUIZ">
+          <div class="ribbon">
+            <span>QUIZ EFFECT</span>
+            <span>QUIZ EFFECT</span>
+            <span>QUIZ EFFECT</span>
+            <span>QUIZ EFFECT</span>
+            <span>QUIZ EFFECT</span>
           </div>
-        </section>
-        <!-- //script -->
-
-        <section id="contact" class="cont">
-          <div class="title">
-            <h2>CONTACT</h2>
+          <div class="effectWrap">
+            <div class="window"></div>
+            <div class="window"></div>
+            <span>visit site</span>
+            <p>자바스크립트의 mosemove 이벤트와
+              offset메소드로 다양한 마우스 효과를
+              나타내었습니다.</p>
           </div>
-        </section>
-        <!-- //script -->
-      </main>
-      <footer id="footer"></footer>
-    </div>
-  </body>
+        </article>
+        <article id="SEARCH">
+          <div class="ribbon">
+            <span>SEARCH EFFECT</span>
+            <span>SEARCH EFFECT</span>
+            <span>SEARCH EFFECT</span>
+            <span>SEARCH EFFECT</span>
+          </div>
+          <div class="effectWrap">
+            <div class="window"></div>
+            <div class="window"></div>
+            <span>visit site</span>
+            <p>자바스크립트의 mosemove 이벤트와
+              offset메소드로 다양한 마우스 효과를
+              나타내었습니다.</p>
+          </div>
+        </article>
+        <article id="SLIDER">
+          <div class="ribbon">
+            <span>SLIDER EFFECT</span>
+            <span>SLIDER EFFECT</span>
+            <span>SLIDER EFFECT</span>
+            <span>SLIDER EFFECT</span>
+          </div>
+          <div class="effectWrap">
+            <div class="window"></div>
+            <div class="window"></div>
+            <span>visit site</span>
+            <p>자바스크립트의 mosemove 이벤트와
+              offset메소드로 다양한 마우스 효과를
+              나타내었습니다.</p>
+          </div>
+        </article>
+      </section>
+      <!-- //script -->
+
+      <section id="game" class="cont">
+        <div class="title">
+          <h2>GAME</h2>
+        </div>
+        <div class="gameCont">
+          <div><span>힣1힣1힣1</span></div>
+          <div><span>힣2힣2힣2</span></div>
+          <div><span>힣3힣3힣3</span></div>
+          <div><span>힣4힣4힣4</span></div>
+          <div><span>힣5힣5힣5</span></div>
+        </div>
+      </section>
+      <!-- //script -->
+
+      <section id="contact" class="cont">
+        <div class="title">
+          <h2>CONTACT</h2>
+        </div>
+      </section>
+      <!-- //script -->
+    </main>
+    <footer id="footer"></footer>
+  </div>
+</body>
+<script>
+  // overBox에 마우스 올리면 worksArti에 class="over"추가하기
+  const overBox = document.querySelectorAll(".overBox");
+  const closeBox = document.querySelectorAll(".close");
+
+  overBox.forEach((el, i) => {
+    el.addEventListener("mouseenter", box => {
+      el.parentNode.classList.add("over");
+    })
+  })
+
+  closeBox.forEach((el, i) => {
+    el.addEventListener("click", () => {
+      el.parentNode.parentNode.classList.remove("over");
+    })
+  })
+</script>
+
 </html>
