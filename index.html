@@ -292,10 +292,12 @@
           </div>
           <div class="effectWrap">
             <div class="window">
-              <iframe src="https://ohwehoh.github.io/webs_class/javascript/effect/parallaxEffect01.html" frameborder="0" width="100%" height="100%"></iframe>
+              <iframe src="https://ohwehoh.github.io/webs_class/javascript/effect/parallaxEffect01.html" frameborder="0"
+                width="100%" height="100%"></iframe>
             </div>
             <div class="window">
-              <iframe src="https://ohwehoh.github.io/webs_class/javascript/effect/parallaxEffect02.html" frameborder="0" width="100%" height="100%"></iframe>
+              <iframe src="https://ohwehoh.github.io/webs_class/javascript/effect/parallaxEffect02.html" frameborder="0"
+                width="100%" height="100%"></iframe>
             </div>
             <span>visit site</span>
             <p>자바스크립트의 mosemove 이벤트와
@@ -356,7 +358,7 @@
       <!-- //script -->
 
       <section id="game" class="cont">
-        <div class="title">
+        <div class="title gameT">
           <h2>GAME</h2>
         </div>
         <div class="gameCont">
@@ -375,10 +377,12 @@
         </div>
       </section>
       <!-- //script -->
+      <div class="scrollTop">scrollTop : <span>0</span>px</div>
     </main>
     <footer id="footer"></footer>
   </div>
 </body>
+<script src="assets/js/gsap.min.js"></script>
 <script>
   // overBox에 마우스 올리면 worksArti에 class="over"추가하기
   const overBox = document.querySelectorAll(".overBox");
@@ -395,6 +399,60 @@
       el.parentNode.parentNode.classList.remove("over");
     })
   })
+
+  //가로모드
+  const mainArea = document.getElementById("main");
+  const gameArea = document.querySelector("#game");
+  const gameTitle = gameArea.querySelector(".title")
+  const gameCont = gameArea.querySelector(".gameCont");
+
+  const title = gameTitle.querySelector("h2")
+
+  function scroll() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    //기본 크기 셋팅
+    let gameTitleheight = gameTitle.offsetheight;
+    let gameContWidth = gameCont.offsetWidth;
+    gameArea.style.height = gameTitleheight + gameContWidth + "px";
+
+    //섹션 박스
+    let viewWidth = gameContWidth - window.innerWidth;
+    let viewHeight = (gameContWidth + gameTitleheight) - window.innerHeight;
+    let goLeft = scrollTop * (viewWidth / viewHeight);
+
+    
+
+    document.querySelector(".scrollTop span").innerText = scrollTop;
+    //game 색션에 왔을때 스크롤탑을 0으로 초기화해서 시작
+    let offset = scrollTop - gameArea.offsetTop
+    if (scrollTop >= (gameArea.offsetTop)) {
+      const fSize = window.getComputedStyle(title).fontSize;
+      gsap.to(".gameT h2", {duration: 1, position: "fixed", top: "-3vw", right: "initial", left: "0vw", fontSize: 10 + "vw", ease: "linear"});
+      gameCont.style.position = "fixed";
+      gameCont.style.top = "20vw";
+      gameCont.style.left = "0vw";
+      gsap.to(".gameT h2", {duration: 1, top: "-3vw", fontSize: 10 + "vw", ease: "linear"});
+    }
+    // else if (scrollTop >= mainArea.querySelector("#game").offsetTop + 200 && scrollTop < mainArea.querySelector("#game").offsetTop + 7690){
+    //   gsap.to(".gameCont", {left: -offset, ease: "linear"});
+    // } 
+    // else if (scrollTop >= mainArea.querySelector("#game").offsetTop + 7690){
+    //   mainArea.querySelector(".gameT").style.top = `${-(offset/1000 - 200)}px`;
+    //   mainArea.querySelector(".gameCont").style.top = `${-(offset/1000 - 200)}px`;
+    //   // gsap.to(".gameT", {
+    //   //   top: -offset/100,
+    //   //   ease: "linear"
+    //   // });
+    //   // gsap.to(".gameCont", {
+    //   //   top: -offset/50,
+    //   //   ease: "linear"
+    //   // });
+    // }
+
+    requestAnimationFrame(scroll);
+  }
+  scroll();
 </script>
 
 </html>

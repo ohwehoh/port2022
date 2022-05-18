@@ -12,14 +12,13 @@ body {
 }
 
 section {position: relative;}
-section#about {z-index: ;}
-section#skill {position: relative;}
-section#works {position: relative;}
-section#script {position: relative;}
-section#game {position: relative;}
-section#contact {position: relative;}
-
-
+section#intro {z-index: 7000;}
+section#about {z-index: 6000;}
+section#skill {z-index: 5000;}
+section#works {z-index: 4000;}
+section#script {z-index: 3000;}
+section#game {z-index: -2000;}
+section#contact {z-index: 3000;}
 
 /* section 타이틀 */
 section.cont {
