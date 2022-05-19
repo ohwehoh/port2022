@@ -1,6 +1,6 @@
 body {
-  background-image: url(../img/bg_yellow.png);
   overflow-x: hidden;
+  background-image: url(../img/bg_yellow.png);
 }
 
 .sha {
@@ -11,14 +11,10 @@ body {
   background-color: #e05057 !important;
 }
 
-section {position: relative;}
-section#intro {z-index: 7000;}
-section#about {z-index: 6000;}
-section#skill {z-index: 5000;}
-section#works {z-index: 4000;}
-section#script {z-index: 3000;}
-section#game {z-index: -2000;}
-section#contact {z-index: 3000;}
+section {
+  position: relative;
+  
+}
 
 /* section 타이틀 */
 section.cont {
@@ -63,27 +59,28 @@ section.cont .title h2::before {
   color: #e05057;
 }
 
-section.cont:nth-child(2) .title h2::before{
+section.cont:nth-child(2) .title h2::before {
   content: 'ABOUT';
 }
 
-section.cont:nth-child(3) .title h2::before{
+section.cont:nth-child(3) .title h2::before {
   content: 'SKILL';
 }
 
-section.cont:nth-child(4) .title h2::before{
+section.cont:nth-child(4) .title h2::before {
   content: 'WORKS';
 }
 
-section.cont:nth-child(5) .title h2::before{
+section.cont:nth-child(5) .title h2::before {
   content: 'SCRIPT';
 }
 
-section.cont:nth-child(6) .title h2::before{
+section.cont:nth-child(6) .title h2::before {
   content: 'GAME';
 }
 
-section.cont:nth-child(7) .title h2::before{
+section.cont:nth-child(7) .title h2::before {
   content: 'CONTACT';
 }
+
 /* //section 타이틀 */

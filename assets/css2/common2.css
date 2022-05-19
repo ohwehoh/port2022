@@ -1,0 +1,83 @@
+body {
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    /* max-width: 100%; */
+    /* width: 100vw; */
+    overscroll-behavior: none;
+    /* background-color: #b9b3a9; */
+    background-image: url(../img/bg_yellow.png);
+}
+  
+#main>section {
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* #intro {background-image: url(../img/bg_yellow.png);}
+#about {background-image: url(../img/bg_yellow.png);}
+#skill {background-image: url(../img/bg_yellow.png);}
+#works {background-image: url(../img/bg_yellow.png);}
+#script {background-image: url(../img/bg_yellow.png);}
+#game {background-image: url(../img/bg_yellow.png);}
+#contact {background-image: url(../img/bg_yellow.png);} */
+
+#game {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+}
+
+.gameCont {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gameCont>div {min-width: 60vw;}
+
+.sha {color: #e05057 !important;}
+
+.shaBox {background-color: #e05057 !important;}
+
+/* section 타이틀 */
+section.cont {min-height: 40vw;margin-top: 7vw;}
+
+.title{position: relative;}
+
+.title h2 {
+    font-family: "turretroad";
+    font-size: 20vw;
+    font-weight: 100;
+    color: #fff;
+}
+
+section#about .title {right: -22vw;}
+section#works .title {transform: translateX(30vw);}
+section#game .title h2 {right: -35vw;}
+section#contact .title h2 {right: -3vw;}
+#main section:nth-of-type(2n-1):not(:last-of-type) .title {left: -32vw;}
+
+section.cont .title h2::before {
+    content: '';
+    position: absolute;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: -1;
+    color: #e05057;
+}
+
+section.cont:nth-of-type(2) .title h2::before {content: 'ABOUT';}
+section.cont:nth-of-type(3) .title h2::before {content: 'SKILL';}
+section.cont:nth-of-type(4) .title h2::before {content: 'WORKS';}
+section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}
+section.cont:nth-of-type(6) .title h2::before {content: 'ABOUT';}
+section.cont:nth-of-type(7) .title h2::before {content: 'CONTACT';}
+
+/* //section 타이틀 */

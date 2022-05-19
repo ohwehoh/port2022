@@ -90,3 +90,11 @@
     src: url(https://cdn.jsdelivr.net/gh/webfontworld/cafe24/Cafe24Ohsquareair.woff2) format('woff2');
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'PFStardust';
+    font-weight: normal; 
+    font-style: normal; 
+    src: url(../font/PFStardust.otf) format('opentype');
+    font-display: swap;
+}
