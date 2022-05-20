@@ -490,7 +490,9 @@
 /* //work */
 
 /* script */
-#script {}
+#script {
+    height: 305.7vw;
+}
 
 #script .ribbon {
     white-space: nowrap;
@@ -503,6 +505,7 @@
     margin-top: 5vw;
     margin-bottom: 5vw;
     position: relative;
+    z-index: 0;
 }
 
 #script .ribbon::before {
@@ -538,16 +541,17 @@
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
+    margin-left: 10vw;
 }
 
-#script article .window:nth-of-type(2) {margin-left: 10vw;}
+#script article .window:nth-of-type(2) {margin-left: 20vw;}
 
 #script article .effectWrap {
     display: grid;
     grid-template-areas:
         "window1 link"
         "window2 desc";
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 35%;
 }
 
 #script article .effectWrap .window:nth-of-type(1) {grid-area: window1;}
@@ -572,6 +576,7 @@
     font-size: 1.2vw;
     color: #fff;
     transform: rotate(0.1deg);
+    width: 70%;
 }
 
 @media (max-width:1450px) {
@@ -642,3 +647,144 @@
 }
 
 /* //script */
+
+/* game */
+/* #game {
+    display: flex;
+    left: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+  } */
+  
+  #game .title {}
+  
+  /* #game .gameCont {
+    display: flex;
+  } */
+  
+  /* #game .gameCont>div {
+    height: 35vw;
+    width: 100vw;
+    transform: translateX(-11vw);
+  } */
+  
+  .gameWrap {
+    display: grid;
+    grid-template-areas:
+      "order gameWind"
+      "gameTitle gameWind"
+      "gameDesc gameWind"
+      "gameCode gameWind";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 15% 35% 35%;
+    align-items: center;
+    justify-items: center;
+  }
+  
+  .gameWrap span.order {
+    grid-area: order;
+    font-family: "turretroad";
+    font-size: 1.5vw;
+    color: rgba(0, 0, 0, 0.5);
+    transform: translateY(1.5vw);
+  }
+  
+  .gameWrap span.gameTitle {
+    grid-area: gameTitle;
+    font-size: 5vw;
+    text-transform: uppercase;
+    color: #000;
+  }
+  
+  .gameWrap div.gameDesc {
+    grid-area: gameDesc;
+    width: 60%;
+  }
+  
+  .gameWrap div.gameDesc p {
+    font-family: "Cafe24Ohsquareair";
+    font-size: 1.5vw;
+    color: #000;
+    transform: rotate(0.1deg);
+    text-align: center;
+    line-height: 1.8;
+  }
+  
+  .gameWrap a {
+    display: inline-block;
+    width: 40%;
+    height: 50%;
+    background-image: url(../img/viewBtn.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    grid-area: gameCode;
+    position: relative;
+    transform: translateY(-2vw);
+  }
+  
+  .gameWrap a.gameCode p {
+    font-family: "turretroad";
+    font-size: 2vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  .gameWrap div.gameWind {
+    grid-area: gameWind;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gameWind.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(-5vw);
+  }
+  
+  .gameWrap div.gameWind .gameT {
+    display: block;
+    font-size: 2vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "PFStardust";
+    transform: translateY(5vw);
+  }
+  
+  .gameWrap div.gameWind .gameBtn {
+    display: inline-block;
+    padding: 0.6vw 2.5vw;
+    font-size: 2vw;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    font-family: "PFStardust";
+    transform: translateY(15vw);
+  }
+  
+  #game .gameCont>div:nth-child(1) {
+    background-color: rgba(0, 188, 250, 0.1);
+  }
+  
+  #game .gameCont>div:nth-child(2) {
+    background-color: rgba(0, 106, 255, 0.1);
+  }
+  
+  #game .gameCont>div:nth-child(3) {
+    background-color: rgba(112, 0, 250, 0.1);
+  }
+  
+  #game .gameCont>div:nth-child(4) {
+    background-color: rgba(229, 0, 250, 0.1);
+  }
+  
+  #game .gameCont>div:nth-child(5) {
+    background-color: rgba(250, 0, 112, 0.1);
+  }
+  
+  /* //game */

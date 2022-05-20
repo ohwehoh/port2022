@@ -318,7 +318,7 @@
                     </article>
                 </section>
             </section>
-            <section id="section2">
+            <!-- <section id="section2">
                 <div class="sec2__wrap">
                     <div>
                         <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
@@ -336,6 +336,32 @@
                         <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
                             alt="">
                     </div>
+                </div>
+            </section> -->
+            <section id="game" class="cont">
+                <div class="title">
+                    <h2>GAME</h2>
+                </div>
+                <div class="gameCont">
+                    <div class="gameWrap typing">
+                        <span class="order">1/4</span>
+                        <span class="gameTitle">typing game</span>
+                        <div class="gameDesc">
+                            <p>javascript로 구현한 영문 타이핑 게임입니다.
+                                60초 제한이고 타자 속도를 측정할 수 있습니다.</p>
+                        </div>
+                        <a href="#" class="gameCode">
+                        <p>code view</p>
+                        </a>
+                        <div class="gameWind">
+                            <span class="gameT">&lt;memory game&gt;</span>
+                            <button class="gameBtn" onclick="buttonClick('start!');">start</button>
+                        </div>
+                    </div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
                 </div>
             </section>
             <section id="section3">
@@ -411,13 +437,13 @@
             pinType: pageContents.style.transform ? "transform" : "fixed"
         });
         window.addEventListener("load", function () {
-            let sec2WrapWidth = document.querySelector(".sec2__wrap").offsetWidth;
+            let sec2WrapWidth = document.querySelector(".gameCont").offsetWidth;
             let horizontal2 = sec2WrapWidth - window.innerWidth;
-            gsap.to("#section2 .sec2__wrap", {
+            gsap.to("#game .gameCont", {
                 scrollTrigger: {
                     scroller: pageContents,
                     scrub: true,
-                    trigger: "#section2",
+                    trigger: "#game",
                     pin: true,
                     anticipatePin: 1,
                     start: "top top",
