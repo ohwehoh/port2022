@@ -318,29 +318,9 @@
                     </article>
                 </section>
             </section>
-            <!-- <section id="section2">
-                <div class="sec2__wrap">
-                    <div>
-                        <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                            alt="">
-                    </div>
-                    <div>
-                        <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                            alt="">
-                    </div>
-                    <div>
-                        <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                            alt="">
-                    </div>
-                    <div>
-                        <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-                            alt="">
-                    </div>
-                </div>
-            </section> -->
             <section id="game" class="cont">
-                <div class="title">
-                    <h2>GAME</h2>
+                <div class="gameTt">
+                    <h2 class="game__title">GAME</h2>
                 </div>
                 <div class="gameCont">
                     <div class="gameWrap typing">
@@ -354,26 +334,91 @@
                         <p>code view</p>
                         </a>
                         <div class="gameWind">
+                            <span class="gameT">&lt;typing game&gt;</span>
+                            <button class="gameBtn" onclick="buttonClick('start!');">start</button>
+                        </div>
+                    </div>
+                    <div class="gameWrap memory">
+                        <span class="order">2/4</span>
+                        <span class="gameTitle">memory game</span>
+                        <div class="gameDesc">
+                            <p>javascript로 구현한 영문 타이핑 게임입니다.
+                                60초 제한이고 타자 속도를 측정할 수 있습니다.</p>
+                        </div>
+                        <a href="#" class="gameCode">
+                        <p>code view</p>
+                        </a>
+                        <div class="gameWind">
                             <span class="gameT">&lt;memory game&gt;</span>
                             <button class="gameBtn" onclick="buttonClick('start!');">start</button>
                         </div>
                     </div>
-                <div>2</div>
-                <div>3</div>
-                <div>4</div>
-                <div>5</div>
+                    <div class="gameWrap typing">
+                        <span class="order">3/4</span>
+                        <span class="gameTitle">tetris game</span>
+                        <div class="gameDesc">
+                            <p>javascript로 구현한 영문 타이핑 게임입니다.
+                                60초 제한이고 타자 속도를 측정할 수 있습니다.</p>
+                        </div>
+                        <a href="#" class="gameCode">
+                        <p>code view</p>
+                        </a>
+                        <div class="gameWind">
+                            <span class="gameT">&lt;tetris game&gt;</span>
+                            <button class="gameBtn" onclick="buttonClick('start!');">start</button>
+                        </div>
+                    </div>
+                    <div class="gameWrap musicplayer">
+                        <span class="order">4/4</span>
+                        <span class="gameTitle">musicplayer</span>
+                        <div class="gameDesc">
+                            <p>javascript로 구현한 영문 타이핑 게임입니다.
+                                60초 제한이고 타자 속도를 측정할 수 있습니다.</p>
+                        </div>
+                        <a href="#" class="gameCode">
+                        <p>code view</p>
+                        </a>
+                        <div class="gameWind">
+                            <span class="gameT">&lt;musicplayer&gt;</span>
+                            <button class="gameBtn" onclick="buttonClick('start!');">start</button>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section id="section3">
-                section3
+            <section id="contact" class="cont">
+            <div class="title">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="contactWrap">
+                <span class="contactHead top">I'm ready so please</span>
+                <span class="contactHead bottom">contact me</span>
+                <div class="contactBody left">
+                    <div class="infoLeft">
+                        <div class="contactPic"></div>
+                    </div>
+                    <div class="infoRightTop">
+                        <p>Ansan, Gyeonggi-doo</p>
+                        <p>1995.07.20.</p>
+                        <p>Lee Yeon Woo</p>
+                    </div>
+                    <div class="infoRightBottom">
+                        <p>KakaoID : galbi99</p>
+                        <p>1995.07.20.</p>
+                    </div>
+                </div>
+                <div class="contactBody right">?</div>
+            </div>
             </section>
         </main>
         <footer></footer>
     </div>
     <!-- partial -->
-    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
-    <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
+    <!-- <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script> -->
+    <!-- <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script> -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/locomotive-scroll.min.js"></script>
     <script>
         //works-----------------------------------------------------------------------
         const workNum = document.querySelectorAll(".work__number");
@@ -438,7 +483,26 @@
         });
         window.addEventListener("load", function () {
             let sec2WrapWidth = document.querySelector(".gameCont").offsetWidth;
+            let sec3WrapWidth = document.querySelector(".game__title").offsetWidth;
             let horizontal2 = sec2WrapWidth - window.innerWidth;
+            let horizontal3 = sec3WrapWidth - window.innerWidth;
+            // gsap.to(".gameTt .game__title", {
+            //     scrollTrigger: {
+            //         scroller: pageContents,
+            //         scrub: true,
+            //         trigger: ".gameTt",
+            //         pin: true,
+            //         anticipatePin: 1,
+            //         start: "top top",
+            //         //end: sec2WrapWidth,
+            //         end: () => `+=${sec3WrapWidth}`,
+            //         markers: true,
+            //     },
+            //     // x: +horizontal3,
+            //     fontSize: -1,
+            //     x: +1100,
+            //     ease: "none"
+            // });
             gsap.to("#game .gameCont", {
                 scrollTrigger: {
                     scroller: pageContents,

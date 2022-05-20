@@ -647,70 +647,49 @@
 }
 
 /* //script */
-
-/* game */
-/* #game {
-    display: flex;
-    left: 0;
-    flex-direction: column;
-    flex-wrap: wrap;
-  } */
-  
-  #game .title {}
-  
-  /* #game .gameCont {
-    display: flex;
-  } */
-  
-  /* #game .gameCont>div {
-    height: 35vw;
-    width: 100vw;
-    transform: translateX(-11vw);
-  } */
-  
-  .gameWrap {
+.gameWrap {
     display: grid;
     grid-template-areas:
-      "order gameWind"
-      "gameTitle gameWind"
-      "gameDesc gameWind"
-      "gameCode gameWind";
+    "order gameWind"
+    "gameTitle gameWind"
+    "gameDesc gameWind"
+    "gameCode gameWind";
     grid-template-columns: 50% 50%;
     grid-template-rows: 15% 15% 35% 35%;
     align-items: center;
     justify-items: center;
-  }
-  
-  .gameWrap span.order {
+}
+
+.gameWrap span.order {
     grid-area: order;
     font-family: "turretroad";
     font-size: 1.5vw;
     color: rgba(0, 0, 0, 0.5);
     transform: translateY(1.5vw);
-  }
-  
-  .gameWrap span.gameTitle {
+}
+
+.gameWrap span.gameTitle {
     grid-area: gameTitle;
     font-size: 5vw;
     text-transform: uppercase;
     color: #000;
-  }
-  
-  .gameWrap div.gameDesc {
+}
+
+.gameWrap div.gameDesc {
     grid-area: gameDesc;
     width: 60%;
-  }
-  
-  .gameWrap div.gameDesc p {
+}
+
+.gameWrap div.gameDesc p {
     font-family: "Cafe24Ohsquareair";
     font-size: 1.5vw;
     color: #000;
     transform: rotate(0.1deg);
     text-align: center;
     line-height: 1.8;
-  }
-  
-  .gameWrap a {
+}
+
+.gameWrap a {
     display: inline-block;
     width: 40%;
     height: 50%;
@@ -720,9 +699,9 @@
     grid-area: gameCode;
     position: relative;
     transform: translateY(-2vw);
-  }
-  
-  .gameWrap a.gameCode p {
+}
+
+.gameWrap a.gameCode p {
     font-family: "turretroad";
     font-size: 2vw;
     position: absolute;
@@ -731,9 +710,9 @@
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     white-space: nowrap;
-  }
-  
-  .gameWrap div.gameWind {
+}
+
+.gameWrap div.gameWind {
     grid-area: gameWind;
     width: 100%;
     height: 100%;
@@ -744,18 +723,18 @@
     flex-direction: column;
     align-items: center;
     transform: translateX(-5vw);
-  }
-  
-  .gameWrap div.gameWind .gameT {
+}
+
+.gameWrap div.gameWind .gameT {
     display: block;
     font-size: 2vw;
     color: #fff;
     text-transform: uppercase;
     font-family: "PFStardust";
     transform: translateY(5vw);
-  }
-  
-  .gameWrap div.gameWind .gameBtn {
+}
+
+.gameWrap div.gameWind .gameBtn {
     display: inline-block;
     padding: 0.6vw 2.5vw;
     font-size: 2vw;
@@ -765,26 +744,65 @@
     text-transform: uppercase;
     font-family: "PFStardust";
     transform: translateY(15vw);
-  }
+}  
+/* //game */
+
+/* contact */
+#contact {}
+#contact .contactWrap {
+    width: 68%;
+    margin-left: 23vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactWrap .contactHead {
+  width: 100%;
+  text-align: right;
   
-  #game .gameCont>div:nth-child(1) {
-    background-color: rgba(0, 188, 250, 0.1);
-  }
-  
-  #game .gameCont>div:nth-child(2) {
-    background-color: rgba(0, 106, 255, 0.1);
-  }
-  
-  #game .gameCont>div:nth-child(3) {
-    background-color: rgba(112, 0, 250, 0.1);
-  }
-  
-  #game .gameCont>div:nth-child(4) {
-    background-color: rgba(229, 0, 250, 0.1);
-  }
-  
-  #game .gameCont>div:nth-child(5) {
-    background-color: rgba(250, 0, 112, 0.1);
-  }
-  
-  /* //game */
+}
+
+.contactWrap .contactHead.top {
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  font-weight: 900;
+  font-size: 7vw;
+}
+
+.contactWrap .contactHead.bottom {
+  width: 100%;
+  height: 50%;
+  background-color: #eee;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11vw;
+  position: relative;
+  z-index: 0;
+}
+
+.contactWrap .contactHead.bottom:before {
+    content: 'contact me';
+    position: absolute;
+    text-transform: uppercase;
+    right: -1vw; top: 1.2vw;
+    color: #e05057;
+    z-index: -1;
+}
+
+.contactWrap .contactBody {
+    width: 100%;
+    height: 20vw;
+}
+
+.contactWrap .contactBody.left {
+  width: 40%;
+  height: 100%;
+  background-color: #ddd;
+}
+
+.contactWrap .contactBody.right {
+  width: 60%;
+  height: 100%;
+  background-color: #ccc;
+}
