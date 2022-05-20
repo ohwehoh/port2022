@@ -8,12 +8,12 @@ body {
     background-image: url(../img/bg_yellow.png);
 }
   
-#main>section {
-    height: 100vh;
+#main > section {
+    /* height: 100vh; */
     /* width: 100vw; */
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     overflow: hidden;
 }
@@ -49,7 +49,7 @@ body {
 /* section 타이틀 */
 section.cont {min-height: 40vw;margin-top: 7vw;}
 
-.title{position: relative;}
+.title { position: relative;}
 
 .title h2 {
     font-family: "turretroad";
@@ -58,11 +58,11 @@ section.cont {min-height: 40vw;margin-top: 7vw;}
     color: #fff;
 }
 
-section#about .title {right: -22vw;}
-section#works .title {transform: translateX(30vw);}
+section#about .title {transform: translateX(39vw);}
+section#works .title {transform: translateX(45vw);}
 section#game .title h2 {right: -35vw;}
 section#contact .title h2 {right: -3vw;}
-#main section:nth-of-type(2n-1):not(:last-of-type) .title {left: -32vw;}
+#main section:nth-of-type(2n-1):not(:last-of-type) .title {left: -7vw;}
 
 section.cont .title h2::before {
     content: '';

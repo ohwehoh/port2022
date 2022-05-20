@@ -170,7 +170,7 @@
   font-weight: lighter;
   font-size: 1vw;
   line-height: 160%;
-  transform: rotate(0.1deg) translate(35%, 0);
+  transform: rotate(0.1deg) translate(50vw, 0);
 }
 
 #aboutArti .aboutDesc p {
@@ -189,7 +189,7 @@
   /* background-image: url(../img/aboutme1.png); */
   background-position: center center;
   background-size: cover;
-  transform: rotate(0.1deg) translate(-65%, 0);
+  transform: rotate(0.1deg) translate(20vw, -5vw);
 }
 
 @media (max-width: 1360px) {
@@ -235,6 +235,8 @@
 }
 
 #skill .skillWrap {
+  width: 80%;
+  margin: 0 auto;
   display: grid;
   grid-template-areas:
     "html div1 div2"
@@ -361,5 +363,380 @@
     margin-bottom: 5vw;
   }
 }
-
 /* //skill */
+
+/* works */
+#works {
+  padding-bottom: 10vw;
+}
+
+.works__summ {
+  transform: translateX(30vw);
+  color: #000;
+  letter-spacing: 0.025em;
+  line-height: 1.5vw;
+}
+
+.works__summ ul span {
+  font-weight: 900;
+  font-size: 1.1vw;
+}
+
+.works__summ ul li {
+  font-family: "Mohave";
+  font-weight: 400;
+  font-size: 1.1vw;
+}
+
+@media (max-width:1300px) {
+  .works__summ {
+    line-height: 20px;
+  }
+
+  .works__summ ul span,
+  .works__summ ul li {
+    font-size: 14px;
+  }
+}
+
+/* 아티클 포지션*/
+#worksArti {
+  display: inline-block;
+  width: 30vw;
+  height: 17.7vw;
+  position: relative;
+}
+
+#worksArti .work__number {
+  font-size: 20vw;
+  font-weight: 300;
+  line-height: 0.8;
+}
+
+/* 아티클 위치 잡기*/
+#worksArti:nth-of-type(1) { margin-left: 10vw;}
+
+#worksArti:nth-of-type(2) {
+  /* margin-left: 20vw; */
+}
+
+#worksArti:nth-of-type(3) {
+  /* margin-top: -30vw;
+  margin-left: 50vw; */
+}
+
+#worksArti:nth-of-type(4) {
+  /* margin-top: 16vw; */
+  /* margin-left: 7vw; */
+}
+
+#worksArti:nth-of-type(5) {
+  /* margin-top: -20vw;
+  margin-left: 55vw; */
+}
+
+/* h3,span,em 위치잡기/설정 */
+/* h3가 span보다 위에있어야함 */
+/* workbox가 생기면 다른 숫자,overbox들은 가려져야함 */
+/* h3, span이 workbox보다 위에있어서 마우스오버되면 위치 바뀌어야함 */
+#worksArti h3 {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 3;
+  width: 0;
+}
+
+#worksArti h3:before {
+  position: absolute;
+  color: #e05057;
+  top: 1.5vw;
+  left: 1.5vw;
+  z-index: -1;
+  font-weight: 100;
+}
+
+#worksArti:nth-of-type(1) h3:before {
+  content: "1";
+}
+
+#worksArti:nth-of-type(2) h3:before {
+  content: "2";
+}
+
+#worksArti:nth-of-type(3) h3:before {
+  content: "3";
+}
+
+#worksArti:nth-of-type(4) h3:before {
+  content: "4";
+}
+
+#worksArti:nth-of-type(5) h3:before {
+  content: "5";
+}
+
+/* em은 workbox보다 위에있으면서 마우스오버되면 위치 바뀌어야함 */
+/* workbox가 생기면 다른 em은 가려져야함 */
+#worksArti em {
+  position: absolute;
+  font-size: 3vw;
+  bottom: 1vw;
+  left: 13.5vw;
+  color: #000;
+  font-weight: 500;
+  z-index: 2;
+}
+
+#worksArti:nth-of-type(1) em {
+  left: 8vw;
+}
+
+/* 제일 상위에 있어야함 */
+/* workbox나타나면 해당 overbox만 최상위 */
+#worksArti .overBox {
+  display: block;
+  position: absolute;
+  left: 1vw;
+  top: 1.5vw;
+  width: 11.2vw;
+  height: 15.5vw;
+  /* background-color: #fff;
+    opacity: 0.5; */
+  z-index: 4;
+}
+
+#worksArti:nth-of-type(1) .overBox {
+  width: 30%;
+}
+
+#worksArti .workBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 30vw;
+  background: #000;
+  /* opacity: 0; */
+  /* z-index: 0; */
+  transform: scale(0, 0);
+}
+
+/* workBox 위치 */
+#worksArti:nth-of-type(1) .workBox {}
+
+#worksArti:nth-of-type(2) .workBox {
+  left: -5vw;
+}
+
+#worksArti:nth-of-type(3) .workBox {
+  left: -20vw;
+}
+
+#worksArti:nth-of-type(5) .workBox {
+  left: -20vw;
+}
+
+/* 오버박스에 마우스 올리면 워크박스 나와야함 */
+/* h3, span, em, boverBox z-index 조절 */
+/* #worksArti .overBox:hover ~ div.workBox {
+  opacity: 1;
+  z-index: 5;
+  transform: scale(1, 1);
+} */
+
+#worksArti.over div.workBox {
+  opacity: 1;
+  z-index: 5;
+  transform: scale(1, 1);
+}
+
+/* z-index변경(hover에 해당된 article만), 위치 바꾸기 */
+#worksArti:nth-of-type(1).over h3 {
+  left: 2vw;
+  top: 35%;
+  z-index: 7;
+}
+
+#worksArti:nth-of-type(2).over h3 {
+  left: -2vw;
+  top: 35%;
+  z-index: 7;
+}
+
+#worksArti:nth-of-type(3).over h3 {
+  left: -15vw;
+  top: 35%;
+  z-index: 7;
+}
+
+#worksArti:nth-of-type(4).over h3 {
+  left: 2.5vw;
+  top: 35%;
+  z-index: 7;
+}
+
+#worksArti:nth-of-type(5).over h3 {
+  left: -17vw;
+  top: 35%;
+  z-index: 7;
+}
+
+#worksArti.over span {
+  left: 3.5vw;
+  top: 43%;
+  z-index: 6;
+}
+
+#worksArti.over em {
+  color: #fff;
+  left: 11.5vw;
+  top: 36.5%;
+  z-index: 6;
+}
+
+#worksArti:nth-of-type(3).over em {
+  color: #fff;
+  left: -1vw;
+  top: 36.5%;
+  z-index: 6;
+}
+
+#worksArti:nth-of-type(4).over em {
+  color: #fff;
+  left: 17vw;
+  top: 36.5%;
+  z-index: 6;
+}
+
+#worksArti:nth-of-type(5).over em {
+  color: #fff;
+  left: -3vw;
+  top: 36.5%;
+  z-index: 6;
+}
+
+/* #worksArti:nth-of-type(2).over em {color: #fff;left: 11.5vw;top: 36.5%;z-index: 6;} */
+
+/* workBox안 내용 */
+.workBox p {
+  font-family: "Cafe24Ohsquareair";
+  font-size: 2vw;
+  color: #fff;
+  position: absolute;
+}
+
+.workBox span {
+  font-size: 2vw;
+  color: #fff;
+  position: absolute;
+}
+
+.workBox .close {
+  position: absolute;
+}
+
+#worksArti .workBox .close {
+  left: initial;
+  right: 1vw;
+  top: 1vw;
+  color: #fff;
+  cursor: pointer;
+}
+
+#worksArti:nth-of-type(1) .workBox {
+  background-image: url(../img/workBoxBg1.png);
+}
+
+#worksArti:nth-of-type(1) .workBox p {
+  left: 11.8vw;
+  top: 12vw;
+}
+
+#worksArti:nth-of-type(1) .workBox span.inBox1 {
+  left: 11.8vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(1) .workBox span.inBox2 {
+  left: 23vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(2) .workBox {
+  background-image: url(../img/workBoxBg1.png);
+}
+
+#worksArti:nth-of-type(2) .workBox p {
+  left: 16.5vw;
+  top: 12vw;
+}
+
+#worksArti:nth-of-type(2) .workBox span.inBox1 {
+  left: 16.5vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(2) .workBox span.inBox2 {
+  left: 28vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(3) .workBox {
+  background-image: url(../img/workBoxBg1.png);
+}
+
+#worksArti:nth-of-type(3) .workBox p {
+  left: 19vw;
+  top: 12vw;
+}
+
+#worksArti:nth-of-type(3) .workBox span.inBox1 {
+  left: 19vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(3) .workBox span.inBox2 {
+  left: 30vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(4) .workBox {
+  background-image: url(../img/workBoxBg1.png);
+}
+
+#worksArti:nth-of-type(4) .workBox p {
+  left: 17vw;
+  top: 12vw;
+}
+
+#worksArti:nth-of-type(4) .workBox span.inBox1 {
+  left: 17vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(4) .workBox span.inBox2 {
+  left: 28vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(5) .workBox {
+  background-image: url(../img/workBoxBg1.png);
+}
+
+#worksArti:nth-of-type(5) .workBox p {
+  left: 17vw;
+  top: 12vw;
+}
+
+#worksArti:nth-of-type(5) .workBox span.inBox1 {
+  left: 17vw;
+  top: 19.5vw;
+}
+
+#worksArti:nth-of-type(5) .workBox span.inBox2 {
+  left: 28vw;
+  top: 19.5vw;
+}
+
+/* //work */

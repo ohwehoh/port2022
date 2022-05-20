@@ -1,0 +1,156 @@
+body {
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+    background-color: #B9B3A9;
+}
+#section1 {background-color: #B9B3A9;}
+#section2 {background-color: #7D7565;}
+#section3 {background-color: #B9B3A9;}
+#section4 {background-color: #ffae0b;}
+#section5 {background-color: #e03535;}
+#section1 {
+    left: 0;
+    overflow: hidden;
+}
+#section2 {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+}
+.sec2__wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.sec2__wrap > div {
+    min-width: 60vw;
+}
+#section1 {
+    width: 100%;
+    background: #ccc;
+}
+#section3 {
+    width: 100%;
+    height: 100vh;
+    background: #111;
+}
+#section5 {
+    width: 100%;
+    height: 100vh;
+    background: #444;
+}
+
+/* intro */
+#section1-1 {
+    width: 100%;
+    height: 100vh;
+    background: #444;
+}
+#intro-1 {
+    width: 100%;
+    height: 100vh;
+    background: #444;
+}
+/* //intro */
+
+/* about */
+#section1-2 {
+    width: 100%;
+    height: 100vh;
+    background: #555;
+}
+#about {
+    width: 100%;
+    /* height: 100vh; */
+    background: #555;
+    overflow-x: hidden;
+}
+/* //about */
+
+/* skill */
+#section1-3 {
+    width: 100%;
+    height: 100vh;
+    background: #666;
+}
+#skill {
+    width: 100%;
+    /* height: 100vh; */
+    background: #666;
+}
+/* //skill */
+
+/* works */
+#section1-4 {
+    width: 100%;
+    height: 100vh;
+    background: #666;
+}
+#works {
+    width: 100%;
+    /* height: 100vh; */
+    background: #666;
+    overflow-x: hidden;
+}
+/* //works */
+
+/* script */
+#section1-5 {
+    width: 100%;
+    height: 200vh;
+    background: rgb(200, 255, 0);
+}
+#script {
+    width: 100%;
+    /* height: 200vh; */
+    /* background: rgb(200, 255, 0); */
+    overflow-x: hidden;
+}
+/* //script */
+
+/* section 타이틀 */
+section.cont {min-height: 40vw;margin-top: 7vw;}
+
+.title { position: relative;}
+
+.title h2 {
+    font-family: "turretroad";
+    font-size: 20vw;
+    font-weight: 100;
+    color: #fff;
+}
+
+#section1 > section#about .title {transform: translateX(39vw);}
+#section1 > section#skill .title {transform: translateX(-5vw);}
+#section1 > section#works .title {transform: translateX(45vw);}
+#section1 > section#script .title {transform: translateX(-5vw);}
+#section1 > section#game .title h2 {right: -35vw;}
+#section1 > section#contact .title h2 {right: -3vw;}
+
+section.cont .title h2::before {
+    content: '';
+    position: absolute;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: -1;
+    color: #e05057;
+}
+
+section.cont:nth-of-type(2) .title h2::before {content: 'ABOUT';}
+section.cont:nth-of-type(3) .title h2::before {content: 'SKILL';}
+section.cont:nth-of-type(4) .title h2::before {content: 'WORKS';}
+section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}
+section.cont:nth-of-type(6) .title h2::before {content: 'ABOUT';}
+section.cont:nth-of-type(7) .title h2::before {content: 'CONTACT';}
+
+/* //section 타이틀 */
+
+/* 그림자 */
+.sha {color: #e05057 !important;}
+
+.shaBox {background-color: #e05057 !important;}
