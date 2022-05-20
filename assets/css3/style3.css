@@ -793,16 +793,41 @@
 .contactWrap .contactBody {
     width: 100%;
     height: 20vw;
+    font-family: "Mohave";
+    font-weight: 700;
+    font-size: 1vw;
 }
 
 .contactWrap .contactBody.left {
   width: 40%;
   height: 100%;
   background-color: #ddd;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.contactWrap .contactBody.left .infoLeft {
+    width: 30%;
+}
+.contactWrap .contactBody.left .infoLeft .contactPic {
+    width: 4vw;
+    height: 4vw;
+    background-color: #fff;
+}
+.contactWrap .contactBody.left .infoRightTop {
+    width: 60%;
+}
+.contactWrap .contactBody.left .infoRightBottom {
+    width: 60%;
 }
 
 .contactWrap .contactBody.right {
   width: 60%;
   height: 100%;
   background-color: #ccc;
+  color: rgba(0, 0, 0, 0.5);
 }
