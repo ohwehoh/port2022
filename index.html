@@ -346,10 +346,8 @@
                 </section>
             </section>
             <section id="game" class="cont">
-                <div data-scroll data-scroll-sticky data-scroll-target="#game" data-scroll-direction="horizontal" data-scroll-speed="-10" class="title gameTt">
-                    <!-- <h2  data-scroll data-scroll-sticky data-scroll-target="#game" data-scroll-position="top" data-scroll-direction="horizontal" data-scroll-speed="-20" class="game__title">GAME</h2> -->
+                <div class="title gameTt">
                     <h2 class="game__title">GAME</h2>
-                    <!-- <h2 class="game__title">GAME</h2> -->
                 </div>
                 <div class="gameCont">
                     <div class="gameWrap typing">
@@ -567,9 +565,9 @@
                 scroller: pageContents,
                 start: 'top-=60%',
                 end: 'bottom-=100%',
-                animation: gsap.to('.gameTt h2', {fontSize: '10vw'}),
+                animation: gsap.to('.gameTt', {height: '13vw'}),
                 scrub: 2,
-                markers: true
+                markers: false,
             })
 
             ScrollTrigger.create({
@@ -577,7 +575,17 @@
                 scroller: pageContents,
                 start: 'top-=60%',
                 end: 'bottom-=100%',
-                animation: gsap.to('.gameTt', {height: '15vw'}),
+                animation: gsap.to('.gameTt h2', {fontSize: '10vw', height: '10vw'}),
+                scrub: 2,
+                markers: false,
+            })
+
+            ScrollTrigger.create({
+                trigger: '.gameTt',
+                scroller: pageContents,
+                start: 'bottom-=100%',
+                end: 'bottom-=0%',
+                animation: gsap.to('.gameTt', {transform: 'translateX(20vw)'}),
                 scrub: 2,
                 markers: true
             })
