@@ -346,8 +346,10 @@
                 </section>
             </section>
             <section id="game" class="cont">
-                <div class="title gameTt">
-                    <h2 data-scroll data-scroll-sticky data-scroll-target="#game" data-scroll-position="top" data-scroll-direction="horizontal" data-scroll-speed="2" class="game__title">GAME</h2>
+                <div data-scroll data-scroll-sticky data-scroll-target="#game" data-scroll-direction="horizontal" data-scroll-speed="-10" class="title gameTt">
+                    <!-- <h2  data-scroll data-scroll-sticky data-scroll-target="#game" data-scroll-position="top" data-scroll-direction="horizontal" data-scroll-speed="-20" class="game__title">GAME</h2> -->
+                    <h2 class="game__title">GAME</h2>
+                    <!-- <h2 class="game__title">GAME</h2> -->
                 </div>
                 <div class="gameCont">
                     <div class="gameWrap typing">
@@ -559,19 +561,32 @@
                 x: -horizontal2,
                 ease: "none"
             });
+
+            ScrollTrigger.create({
+                trigger: '.gameTt',
+                scroller: pageContents,
+                start: 'top-=60%',
+                end: 'bottom-=100%',
+                animation: gsap.to('.gameTt h2', {fontSize: '10vw'}),
+                scrub: 2,
+                markers: true
+            })
+
+            ScrollTrigger.create({
+                trigger: '.gameTt',
+                scroller: pageContents,
+                start: 'top-=60%',
+                end: 'bottom-=100%',
+                animation: gsap.to('.gameTt', {height: '15vw'}),
+                scrub: 2,
+                markers: true
+            })
+
             ScrollTrigger.addEventListener("refresh", () => scroller.update());
             ScrollTrigger.refresh();
         });
         //----------------------------------------------------------------------scroll
 
-        ScrollTrigger.create({
-            trigger: '#game .gameTt',
-            scroller: pageContents,
-            start: 'top-=60%',
-            end: 'bottom+=40%',
-            animation: gsap.to('#game .gameTt', {color: "red"}),
-            scrub: 2,
-            markers: true
-        })
+
     </script>
 </body>
