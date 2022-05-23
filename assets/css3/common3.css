@@ -46,9 +46,13 @@ section#contact {
 }
 
 /* section 타이틀 */
-section.cont {min-height: 40vw;margin-top: 7vw;}
+section.cont {
+    /* min-height: 40vw; */
+    margin-top: 7vw;
+}
 
-.title, .gameTt { position: relative;}
+/* .title, .gameTt { position: relative;} */
+.title { position: relative;}
 
 .title h2 {
     font-family: "turretroad";
@@ -57,22 +61,33 @@ section.cont {min-height: 40vw;margin-top: 7vw;}
     color: #fff;
 }
 
-.gameTt h2 {
+/* .gameTt h2 {
     font-family: "turretroad";
     font-size: 10vw;
     font-weight: 100;
     color: #fff;
-}
+} */
 
 #section1 > section#about .title {transform: translateX(39vw);}
+/* #section1 > section#about .title {padding-left: 70vw;} */
 #section1 > section#skill .title {transform: translateX(-5vw);}
 #section1 > section#works .title {transform: translateX(45vw);}
 #section1 > section#script .title {transform: translateX(-5vw);}
 /* .gameTt {transform: translateX(45vw);} */
+#game .title {transform: translateX(45vw);}
 #contact .title {transform: translateX(14vw)}
 
-section.cont .title h2::before,
+/* section.cont .title h2::before,
 .gameTt h2::before {
+    content: '';
+    position: absolute;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: -1;
+    color: #e05057;
+} */
+
+section.cont .title h2::before {
     content: '';
     position: absolute;
     top: 1vw;
@@ -85,7 +100,7 @@ section.cont:nth-of-type(2) .title h2::before {content: 'ABOUT';}
 section.cont:nth-of-type(3) .title h2::before {content: 'SKILL';}
 section.cont:nth-of-type(4) .title h2::before {content: 'WORKS';}
 section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}
-.gameTt h2::before {content: 'GAME';}
+#game .title h2::before {content: 'GAME';}
 #contact .title h2::before {content: 'CONTACT';}
 
 /* //section 타이틀 */

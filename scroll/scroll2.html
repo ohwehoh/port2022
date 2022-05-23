@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Horizontal scroll section with GSAP ScrollTrigger &amp; Locomotive Scroll</title>
+
+    <link rel='stylesheet' href='https://use.typekit.net/skn8ash.css'>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            transition: 0.3s ease-out;
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+            overscroll-behavior: none;
+            background-color: #b9b3a9;
+        }
+        #contents > section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #section1 {background-color: #b9b3a9;}
+        #section2 {background-color: #7d7565;}
+        #section3 {background-color: #b9b3a9;}
+        #section4 {background-color: #7d7565;}
+        #section5 {background-color: #b9b3a9;}
+
+        #section2 {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            left: 0;
+        }
+        #section4 {
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            left: 0;
+        }
+
+        .sec2__wrap {
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .sec2__wrap > div {
+            min-width: 60vw;
+        }
+        .sec4__wrap {
+            height: 100vh;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .sec4__wrap > div {
+            min-width: 60vw;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="contents">
+        <section id="section1">
+            <div>
+                <h1 data-scroll data-scroll-speed="1"><span>Horizontal</span></h1>
+                <p data-scroll data-scroll-speed="4" data-scroll-delay="0.2">Locomotive Scroll</p>
+            </div>
+        </section>
+
+        <section id="section2">
+            <div class="sec2__wrap">
+                <div>
+                    <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            section3
+        </section>
+        <section id="section4">
+            <div class="sec4__wrap">
+                <div>
+                    <img src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+                <div>
+                    <img src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="section5">
+            section5
+        </section>
+    </div>
+    <!-- partial -->
+    <script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const pageContents = document.querySelector("#contents");
+
+        const scroller = new LocomotiveScroll({
+            el: pageContents,
+            smooth: true
+        });
+
+        scroller.on("scroll", ScrollTrigger.update);
+
+        ScrollTrigger.scrollerProxy(pageContents, {
+            scrollTop(value) {
+                return arguments.length ?
+                    scroller.scrollTo(value, 0, 0) :
+                    scroller.scroll.instance.scroll.y;
+            },
+            getBoundingClientRect() {
+                return {
+                    left: 0,
+                    top: 0,
+                    width: window.innerWidth,
+                    height: window.innerHeight
+                };
+            },
+            pinType: pageContents.style.transform ? "transform" : "fixed"
+        });
+
+        window.addEventListener("load", function () {
+            let sec2WrapWidth = document.querySelector(".sec2__wrap").offsetWidth;
+            let horizontal2 = sec2WrapWidth - window.innerWidth;
+
+            gsap.to("#section2 .sec2__wrap", {
+                scrollTrigger: {
+                    scroller: pageContents, 
+                    scrub: true,
+                    trigger: "#section2",
+                    pin: true,
+                    // anticipatePin: 1,
+                    start: "top top",
+                    markers: true,
+                    end: sec2WrapWidth
+                },
+                x: -horizontal2,
+                ease: "none"
+            });
+
+
+            ScrollTrigger.addEventListener("refresh", () => scroller.update());
+            ScrollTrigger.refresh();
+        });
+    </script>
+
+</body>
+
+</html>

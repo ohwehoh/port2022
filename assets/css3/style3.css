@@ -129,6 +129,12 @@
 /* about */
 #about {}
 
+#aboutArti {
+    display: flex;
+    flex-direction: column;
+    transform: translate(50vw, 0);
+}
+
 #aboutArti .aboutDesc {
     width: 40vw;
     font-family: "Cafe24Ohsquareair";
@@ -136,7 +142,7 @@
     font-weight: lighter;
     font-size: 1vw;
     line-height: 160%;
-    transform: rotate(0.1deg) translate(50vw, 0);
+    transform: rotate(0.1deg);
 }
 
 #aboutArti .aboutDesc p {
@@ -155,7 +161,7 @@
     background-image: url(../img/picture.png);
     background-position: center center;
     background-size: cover;
-    transform: rotate(0.1deg) translate(20vw, -5vw);
+    transform: rotate(0.1deg) translate(-30vw, -5vw);
 }
 
 @media (max-width: 1360px) {
@@ -642,8 +648,9 @@
         padding-bottom: 0;
     }
 }
-
 /* //script */
+
+/* game */
 .gameWrap {
     display: grid;
     grid-template-areas:
