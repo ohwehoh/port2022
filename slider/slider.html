@@ -79,12 +79,13 @@
         .slider:nth-child(5):before { content: '이미지5'; }
         .slider:nth-child(6):before { content: '이미지6'; }
         .slider:nth-child(7):before { content: '이미지7'; }
+        .slider:nth-child(8):before { content: '이미지1'; }
     </style>
 </head>
 
 <body>
     <main id="slider__effect">
-        <article id="slider__window">
+        <div id="slider__window">
             <div class="slider__inner">
                 <div class="slider"><img src="img/php1.png" alt="이미지1"></div>
                 <div class="slider"><img src="img/php2.png" alt="이미지2"></div>
@@ -94,51 +95,62 @@
                 <div class="slider"><img src="img/php6.png" alt="이미지6"></div>
                 <div class="slider"><img src="img/php7.png" alt="이미지7"></div>
             </div>
-        </article>
+        </div>
     </main>
 
     <script src="../assets/js/gsap.min.js"></script>
     <script>
-        const sliderWindow = document.querySelector("#slider__window");
-        const sliderInner = document.querySelector(".slider__inner");
+        timer = null;
+        let sliderInner = document.querySelector(".slider__inner");
         const slider = document.querySelectorAll(".slider");
-        
-        // slider.forEach((el) => {
-        //     console.log("imgWidth: " + el.offsetWidth);
-        //     console.log("imgHeight: " + el.offsetHeight);
-        // })
-        // console.log("windowWidth: " + sliderWindow.offsetWidth);
-        // console.log("windowHeight: " + sliderWindow.offsetHeight);
-        // console.log("innerWidth: " + sliderInner.offsetWidth);
-        // console.log("innerHeight: " + sliderInner.offsetHeight);
-
-        let currentIndex = 0;
         let sliderCount = slider.length;
-        let sliderWidth = sliderWindow.offsetWidth;
         let sliderClone = sliderInner.firstElementChild.cloneNode(true);
         sliderInner.appendChild(sliderClone);
+        let currentIndex = 0;
 
-        function sliderEffectF(){
-            currentIndex++;
-            sliderInner.style.transition = "all 0.3s";
-            sliderInner.style.transform = `translateX(-${sliderWidth*currentIndex}px)`;
+        function sliderEffectInit(){
+            console.log("init")
+            clearInterval(timer);
+            const sliderWindow = document.querySelector("#slider__window");           
+
+            
+            let sliderWidth = sliderWindow.offsetWidth;
+            
+            const info = {
+                currentIndex : currentIndex,
+                sliderCount : sliderCount,
+                sliderWidth : sliderWidth,
+                sliderInner : sliderInner,
+            }
+
+            timer = setInterval(() => {sliderEffectMove(info)}, 2000);
+
+            return sliderClone;
+        }
+
+        function sliderEffectMove(info){
+            console.log("move");
+            info.currentIndex++;
+            info.sliderInner.style.transition = "all 0.3s";
+            info.sliderInner.style.transform = `translateX(-${info.sliderWidth*info.currentIndex}px)`;
 
             //마지막 사진에 갔을때
-            if(currentIndex == sliderCount){
+            if(info.currentIndex == info.sliderCount){
                 setTimeout(()=>{
-                    sliderInner.style.transition = "0s";
-                    sliderInner.style.transform = 'translateX(0)';
+                    info.sliderInner.style.transition = "0s";
+                    info.sliderInner.style.transform = 'translateX(0)';
                 }, 300);
-                currentIndex = 0;
+                info.currentIndex = 0;
             }
         }
 
-        let moveImg = setInterval(sliderEffectF, 1000);
-        moveImg;
-        function stopInterval(){
-            clearInterval(moveImg);
-        }
-        window.addEventListener("resize", stopInterval());
+        sliderEffectInit();
+        
+        window.addEventListener("resize", () => {
+            console.log("resize");
+            currentIndex = -1;
+            sliderEffectInit();
+        });
     </script>
 </body>
 

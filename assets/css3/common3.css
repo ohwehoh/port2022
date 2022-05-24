@@ -4,7 +4,8 @@ body {
     max-width: 100%;
     width: 100%;
     overscroll-behavior: none;
-    background-image: url(../img/bg_yellow.png);
+    background-color: #FF9900;
+    background-image: url(../img/bgLine.png);
 }
 #section1 {
     width: 100%;

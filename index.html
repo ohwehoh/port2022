@@ -31,7 +31,7 @@
             </menu>
         </header>
         <main id="main">
-            <section id="section1">
+            <section id="section1" data-textcolor="#bcb8ad" data-bgcolor="#FC9700">
                 <section id="intro">
                     <div class="intro__title">
                       <span class="intro__title__top tTop">LYW</span>
@@ -204,6 +204,18 @@
                             <p class="workDesc hide">웹표준을 준수한 사이트입니다.</p>
                             <a href="http://ohwehoh.dothome.co.kr/php/pages/main.php" class="workLink hide"><span class="inBox1">visit site</span></a>
                             <span class="inBox2 hide">over view</span>
+
+                            <!-- <div class="slider__window hide">
+                                <div class="slider__inner">
+                                    <div class="slider"><img src="assets/img/php1.png" alt="이미지1"></div>
+                                    <div class="slider"><img src="assets/img/php2.png" alt="이미지2"></div>
+                                    <div class="slider"><img src="assets/img/php3.png" alt="이미지3"></div>
+                                    <div class="slider"><img src="assets/img/php4.png" alt="이미지4"></div>
+                                    <div class="slider"><img src="assets/img/php5.png" alt="이미지5"></div>
+                                    <div class="slider"><img src="assets/img/php6.png" alt="이미지6"></div>
+                                    <div class="slider"><img src="assets/img/php7.png" alt="이미지7"></div>
+                                </div>
+                            </div> -->
                         </article>
                         <article class="worksArti n3">
                             <h3 class="work__number">3</h3>
@@ -220,6 +232,18 @@
                             <p class="workDesc hide">웹표준을 준수한 사이트입니다.</p>
                             <a href="https://wwoo.netlify.app" class="workLink hide"><span class="inBox1">visit site</span></a>
                             <span class="inBox2 hide">over view</span>
+
+                            <div class="slider__window hide">
+                                <div class="slider__inner">
+                                    <div class="slider"><img src="assets/img/react1.png" alt="이미지1"></div>
+                                    <div class="slider"><img src="assets/img/react2.png" alt="이미지2"></div>
+                                    <div class="slider"><img src="assets/img/react3.png" alt="이미지3"></div>
+                                    <div class="slider"><img src="assets/img/react4.png" alt="이미지4"></div>
+                                    <div class="slider"><img src="assets/img/react5.png" alt="이미지5"></div>
+                                    <div class="slider"><img src="assets/img/react6.png" alt="이미지6"></div>
+                                    <div class="slider"><img src="assets/img/react7.png" alt="이미지7"></div>
+                                </div>
+                            </div>
                         </article>
                         <article class="worksArti n5">
                             <h3 class="work__number">5</h3>
@@ -348,7 +372,7 @@
                     </article>
                 </section>
             </section>
-            <section id="game" class="cont">
+            <section id="game" class="cont" data-textcolor="#bcb8ad" data-bgcolor="#0B4619">
                 <div class="title gameTt">
                     <h2 class="game__title">GAME</h2>
                 </div>
@@ -423,7 +447,7 @@
                     </div>
                 </div>
             </section>
-            <section id="contact" class="cont">
+            <section id="contact" class="cont" data-textcolor="#bcb8ad" data-bgcolor="#FC9700">
             <div class="title">
                 <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">CONTACT</h2>
             </div>
@@ -463,9 +487,11 @@
     <script src="assets/js/ScrollTrigger.min.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/locomotive-scroll.min.js"></script>
+    <script src="assets/js/slider.js"></script>
     <script>
         //works-----------------------------------------------------------------------
         const workNum = document.querySelectorAll(".work__number");
+        let overV = false;
 
         workNum.forEach((el,i) => {
             const workArti = el.parentNode;
@@ -499,6 +525,23 @@
                 });
             }
         };
+
+        //slider
+        const overView = document.querySelectorAll(".inBox2");
+        overView.forEach((el,i) => {
+            el.addEventListener("mouseenter", () => {
+                console.log("in: " + overV);
+                el.nextElementSibling.classList.remove("hide");
+                el.style.zIndex = 2;
+                overV ? 0 : overV = varInit(overV);
+                sliderEffectInit();
+            })
+            el.addEventListener("mouseleave", () => {
+                console.log("out" + overV);
+                el.nextElementSibling.classList.add("hide");
+                clearInterval(timer);
+            })
+        })
         //------------------------------------------------------------------------work
 
         //scroll----------------------------------------------------------------------
@@ -540,7 +583,7 @@
                     start: "top top",
                     //end: sec2WrapWidth,
                     end: () => `+=${sec2WrapWidth}`,
-                    markers: true,
+                    markers: false,
                 },
                 x: -horizontal2,
                 ease: "none"
@@ -583,7 +626,7 @@
                 end: '+=50%',
                 animation: gsap.to('.aboutDesc .about1', {opacity: '1'}),
                 scrub: 2,
-                markers: true,
+                markers: false,
             })
 
             ScrollTrigger.create({
@@ -593,7 +636,7 @@
                 end: '+=50%',
                 animation: gsap.to('.aboutDesc .about2', {opacity: '1'}),
                 scrub: 2,
-                markers: true,
+                markers: false,
             })
 
             ScrollTrigger.create({
@@ -603,8 +646,37 @@
                 end: '+=50%',
                 animation: gsap.to('.aboutDesc .about3', {opacity: '1'}),
                 scrub: 2,
-                markers: true,
+                markers: false,
             })
+
+            const scrollColorElems = document.querySelectorAll("[data-bgcolor]");
+
+            scrollColorElems.forEach((colorSection, i) => {
+                console.log(colorSection);
+                const prevBg = i === 0 ? "" : scrollColorElems[i - 1].dataset.bgcolor;
+                const prevText = i === 0 ? "" : scrollColorElems[i - 1].dataset.textcolor;
+                // const prevBg = colorSection.dataset.bgcolor;
+                // const prevText = colorSection.dataset.textcolor;
+
+                ScrollTrigger.create({
+                    trigger: colorSection,
+                    scroller: pageContents,
+                    start: "top 50%",
+                    onEnter: () =>
+                        gsap.to("body", {
+                            backgroundColor: colorSection.dataset.bgcolor,
+                            color: colorSection.dataset.textcolor,
+                            overwrite: "auto"
+                        }),
+                    onLeaveBack: () =>
+                        gsap.to("body", {
+                            backgroundColor: prevBg,
+                            color: prevText,
+                            overwrite: "auto"
+                        }),
+                    markers: true,
+                });
+            });
 
             ScrollTrigger.addEventListener("refresh", () => scroller.update());
             ScrollTrigger.refresh();

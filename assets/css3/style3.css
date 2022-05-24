@@ -497,6 +497,60 @@
 .worksArti.showBox:not(:nth-of-type(1)) span.inBox2 {left: 28vw;top: 19.5vw;}
 .worksArti.showBox.n1 span.inBox1 {left: 4.2vw;top: 19.5vw; white-space: nowrap;}
 .worksArti.showBox.n1 span.inBox2 {left: 23vw;top: 19.5vw;}
+
+.worksArti .slider__window.hide {
+    display: none;
+}
+
+/* slider */
+.slider__window {
+    /*화면 보이는 구간*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.slider__inner {
+    /*이미지 움직이는 영역*/
+    display: flex;
+    width: calc(100% * 8);
+    height: 100%;
+    position: relative;
+    background-color: #eee;
+    /*left를 사용하기 위해서*/
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #000;
+}
+
+img {
+    width: 100%;
+}
+
+.slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 5px 10px 3px;
+}
+
+.slider:nth-child(1):before { content: '이미지1'; }
+.slider:nth-child(2):before { content: '이미지2'; }
+.slider:nth-child(3):before { content: '이미지3'; }
+.slider:nth-child(4):before { content: '이미지4'; }
+.slider:nth-child(5):before { content: '이미지5'; }
+.slider:nth-child(6):before { content: '이미지6'; }
+.slider:nth-child(7):before { content: '이미지7'; }
+.slider:nth-child(8):before { content: '이미지1'; }
 /* //work */
 
 /* script */
