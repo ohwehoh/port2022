@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+        html.has-scroll-smooth {
+            overflow: hidden;
+        }
+
+        html.has-scroll-dragging {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .has-scroll-smooth body {
+            overflow: hidden;
+        }
+
+        .has-scroll-smooth [data-scroll-container] {
+            min-height: 100vh;
+        }
+
+        [data-scroll-direction="horizontal"] [data-scroll-container] {
+            height: 100vh;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        [data-scroll-direction="horizontal"] [data-scroll-section] {
+            display: inline-block;
+            vertical-align: top;
+            white-space: nowrap;
+            height: 100%;
+        }
+
+        .c-scrollbar {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 11px;
+            height: 100%;
+            transform-origin: center right;
+            transition: transform 0.3s, opacity 0.3s;
+            opacity: 0;
+        }
+
+        .c-scrollbar:hover {
+            transform: scaleX(1.45);
+        }
+
+        .c-scrollbar:hover,
+        .has-scroll-scrolling .c-scrollbar,
+        .has-scroll-dragging .c-scrollbar {
+            opacity: 1;
+        }
+
+        [data-scroll-direction="horizontal"] .c-scrollbar {
+            width: 100%;
+            height: 10px;
+            top: auto;
+            bottom: 0;
+            transform: scaleY(1);
+        }
+
+        [data-scroll-direction="horizontal"] .c-scrollbar:hover {
+            transform: scaleY(1.3);
+        }
+
+        .c-scrollbar_thumb {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: black;
+            opacity: 0.5;
+            width: 7px;
+            border-radius: 10px;
+            margin: 2px;
+            cursor: -webkit-grab;
+            cursor: grab;
+        }
+
+        .has-scroll-dragging .c-scrollbar_thumb {
+            cursor: -webkit-grabbing;
+            cursor: grabbing;
+        }
+
+        [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+            right: auto;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-scroll-container>
+        <div data-scroll-section>
+            <h1 data-scroll>Hey</h1>
+            <p data-scroll>👋</p>
+        </div>
+        <div data-scroll-section>
+            <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+            <p data-scroll data-scroll-speed="2">😬</p>
+        </div>
+        <section id="js-target">Come here please.</section>
+        <!-- Using modularJS -->
+        <div data-scroll data-scroll-call="function, module">Trigger</div>
+        <!-- Using jQuery events -->
+        <div data-scroll data-scroll-call="EVENT_NAME">Trigger</div>
+        <!-- Or do it your own way 😎 -->
+        <div data-scroll data-scroll-call="{y,o,l,o}">Trigger</div>
+    </div>
+
+    <script src="../assets/js/locomotive-scroll.min.js"></script>
+    <script>
+        const scroll = new LocomotiveScroll();
+
+        scroll.on('call', func => {
+            // Using modularJS
+            this.call(...func);
+            // Using jQuery events
+            $(document).trigger(func);
+            // Or do it your own way 😎
+        });
+    </script>
+</body>
+
+</html>

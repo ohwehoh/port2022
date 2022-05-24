@@ -98,6 +98,7 @@ section.cont .title h2::before {
 }
 
 section.cont:nth-of-type(2) .title h2::before {content: 'ABOUT';}
+/* section.cont:nth-of-type(1) .title h2::before {content: 'ABOUT';} */
 section.cont:nth-of-type(3) .title h2::before {content: 'SKILL';}
 section.cont:nth-of-type(4) .title h2::before {content: 'WORKS';}
 section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}

@@ -16,21 +16,21 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <div id="wrap" class="wrap">
+        <header id="header" class="header">
+            <menu id="menu">
+                <ul>
+                    <li><a href="#"><em>01</em><span>about me</span></a></li>
+                    <li><a href="#"><em>02</em><span>skill</span></a></li>
+                    <li><a href="#"><em>03</em><span>works</span></a></li>
+                    <li><a href="#"><em>04</em><span>script</span></a></li>
+                    <li><a href="#"><em>05</em><span>game</span></a></li>
+                    <li><a href="#"><em>06</em><span>contact</span></a></li>
+                    <li><a href="#"><em>github</em></a></li>
+                </ul>
+            </menu>
+        </header>
         <main id="main">
-            <header id="header">
-                <menu id="menu">
-                    <ul>
-                        <li><a href="#"><em>01</em><span>about me</span></a></li>
-                        <li><a href="#"><em>02</em><span>skill</span></a></li>
-                        <li><a href="#"><em>03</em><span>works</span></a></li>
-                        <li><a href="#"><em>04</em><span>script</span></a></li>
-                        <li><a href="#"><em>05</em><span>game</span></a></li>
-                        <li><a href="#"><em>06</em><span>contact</span></a></li>
-                        <li><a href="#"><em>github</em></a></li>
-                    </ul>
-                </menu>
-            </header>
             <section id="section1">
                 <section id="intro">
                     <div class="intro__title">
@@ -54,8 +54,9 @@
                         <h2 data-scroll data-scroll-direction="horizontal" data-scroll-speed="1">ABOUT</h2>
                     </div>
                         <article id="aboutArti">
-                        <div data-scroll data-scroll-sticky data-scroll-target="#aboutArti" class="aboutDesc">
-                            <p>
+                        <div class="aboutDesc">
+                            <!-- <p class="about1"> -->
+                            <p data-scroll data-scroll-delay="0" data-scroll-speed="0" class="about1">
                             안녕하세요? 저는 프론트엔드 개발자를 꿈꾸는
                             <span>이연우</span>입니다.
                             컴퓨터공학을 전공하고, 2019년에 졸업하였습니다. 적성에 맞는 직업을
@@ -63,7 +64,8 @@
                             먼 길을 돌아 2021년 말 부터 프론트엔드 학원을 다니기 시작하였고
                             이제 정착할 곳을 찾았습니다.
                             </p>
-                            <p>
+                            <!-- <p class="about2"> -->
+                            <p data-scroll data-scroll-delay="0.5" data-scroll-speed="0" class="about2">
                             6개월 동안 기초부터 차근차근 공부하다보니 머릿속에 흐릿하게
                             떠다니던 지식들이
                             정리되면서 웹 개발 공부에 더욱 흥미가 생기고 <span>자신감</span>도
@@ -73,7 +75,8 @@
                             구현하데 큰 재미를 느껴 이 분야로 평생 먹고 살고 싶다는 생각이
                             들었습니다.
                             </p>
-                            <p>
+                            <!-- <p class="about3"> -->
+                            <p data-scroll data-scroll-delay="0.5" data-scroll-speed="0" class="about3">
                             긴 취업 준비 생활로 자신감이 많이 하락 한 상태였는데 교육을 받으며
                             열정적으로
                             변한 스스로에게 자신감이 생겼습니다. 이 자신감을 바탕으로 더욱
@@ -102,7 +105,7 @@
                         </article>
                     <div class="div1"></div>
                     <div class="div2"></div>
-                    <article data-scroll data-scroll-speed="5" data-scroll-delay="0.5" id="skillArti" class="css">
+                    <article data-scroll data-scroll-speed="6" data-scroll-delay="0.5" id="skillArti" class="css">
                         <h3 class="skillT">CSS</h3>
                         <p>
                             CSS의 각종 속성을 적절하게 사용하며 IR기법이나 이미지
@@ -114,7 +117,7 @@
                     </article>
                     <div class="div3"></div>
                     <div class="div4"></div>
-                    <article data-scroll data-scroll-speed="6" data-scroll-delay="1" id="skillArti" class="javascript">
+                    <article data-scroll data-scroll-speed="8" data-scroll-delay="1" id="skillArti" class="javascript">
                         <h3 class="skillT">JAVASCRIPT</h3>
                         <p>
                             슬라이드나 갤러리와 같은 플러그인의 옵션을 잘 활용하고 디자인에
@@ -124,7 +127,7 @@
                     </article>
                     <div class="div5"></div>
                     <div class="div6"></div>
-                    <article data-scroll data-scroll-speed="4" data-scroll-delay="1.5" id="skillArti" class="jquery">
+                    <article data-scroll data-scroll-speed="5" data-scroll-delay="1.5" id="skillArti" class="jquery">
                         <h3 class="skillT">JQUERY</h3>
                         <p>
                             스크립트가 데이터베이스와 연동이 필요할 때 주로 사용하였습니다.
@@ -135,7 +138,7 @@
                     <div class="div7"></div>
                     <div class="div8"></div>
                     <div class="div9"></div>
-                    <article data-scroll data-scroll-speed="5" data-scroll-delay="0.5" id="skillArti" class="php">
+                    <article data-scroll data-scroll-speed="7" data-scroll-delay="0.5" id="skillArti" class="php">
                         <h3 class="skillT">PHP</h3>
                         <p>
                             PHP 프로젝트 수업을 듣고 응용하여 팀 프로젝트에 적용하면서
@@ -145,7 +148,7 @@
                     </article>
                     <div class="div10"></div>
                     <div class="div11"></div>
-                    <article data-scroll data-scroll-speed="6" data-scroll-delay="1" id="skillArti" class="mysql">
+                    <article data-scroll data-scroll-speed="9" data-scroll-delay="1" id="skillArti" class="mysql">
                         <h3 class="skillT">MYSQL</h3>
                         <p>
                             php사이트 만들기 수업을 듣고 팀 프로젝트에 적용하면서
@@ -156,7 +159,7 @@
                     </article>
                     <div class="div12"></div>
                     <div class="div13"></div>
-                    <article data-scroll data-scroll-speed="4" data-scroll-delay="1.5" id="skillArti" class="react">
+                    <article data-scroll data-scroll-speed="7" data-scroll-delay="1.5" id="skillArti" class="react">
                         <h3 class="skillT">REACT</h3>
                         <p>
                             REACT를 통하여 프레임워크를 사용해봤습니다. 싱글페이지의 구성과
@@ -500,7 +503,7 @@
 
         //scroll----------------------------------------------------------------------
         gsap.registerPlugin(ScrollTrigger);
-        const pageContents = document.querySelector("#main");
+        const pageContents = document.querySelector("#wrap");
         const scroller = new LocomotiveScroll({
             el: pageContents,
             smooth: true
@@ -527,23 +530,6 @@
             let sec3WrapWidth = document.querySelector(".game__title").offsetWidth;
             let horizontal2 = sec2WrapWidth - window.innerWidth;
             let horizontal3 = sec3WrapWidth - window.innerWidth;
-            // gsap.to(".gameTt .game__title", {
-            //     scrollTrigger: {
-            //         scroller: pageContents,
-            //         scrub: true,
-            //         trigger: ".gameTt",
-            //         pin: true,
-            //         anticipatePin: 1,
-            //         start: "top top",
-            //         //end: sec2WrapWidth,
-            //         end: () => `+=${sec3WrapWidth}`,
-            //         markers: true,
-            //     },
-            //     // x: +horizontal3,
-            //     fontSize: -1,
-            //     x: +1100,
-            //     ease: "none"
-            // });
             gsap.to("#game .gameCont", {
                 scrollTrigger: {
                     scroller: pageContents,
@@ -554,7 +540,7 @@
                     start: "top top",
                     //end: sec2WrapWidth,
                     end: () => `+=${sec2WrapWidth}`,
-                    markers: false,
+                    markers: true,
                 },
                 x: -horizontal2,
                 ease: "none"
@@ -587,14 +573,42 @@
                 end: 'bottom-=0%',
                 animation: gsap.to('.gameTt', {transform: 'translateX(20vw)'}),
                 scrub: 2,
-                markers: true
+                markers: false,
+            })
+
+            ScrollTrigger.create({
+                trigger: '#about',
+                scroller: pageContents,
+                start: 'top top',
+                end: '+=50%',
+                animation: gsap.to('.aboutDesc .about1', {opacity: '1'}),
+                scrub: 2,
+                markers: true,
+            })
+
+            ScrollTrigger.create({
+                trigger: '#about',
+                scroller: pageContents,
+                start: 'top+=10%',
+                end: '+=50%',
+                animation: gsap.to('.aboutDesc .about2', {opacity: '1'}),
+                scrub: 2,
+                markers: true,
+            })
+
+            ScrollTrigger.create({
+                trigger: '#about',
+                scroller: pageContents,
+                start: 'top+=20%',
+                end: '+=50%',
+                animation: gsap.to('.aboutDesc .about3', {opacity: '1'}),
+                scrub: 2,
+                markers: true,
             })
 
             ScrollTrigger.addEventListener("refresh", () => scroller.update());
             ScrollTrigger.refresh();
         });
         //----------------------------------------------------------------------scroll
-
-
     </script>
 </body>
