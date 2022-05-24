@@ -111,3 +111,11 @@ section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}
 .sha {color: #e05057 !important;}
 
 .shaBox {background-color: #e05057 !important;}
+
+.has-scroll-smooth {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
