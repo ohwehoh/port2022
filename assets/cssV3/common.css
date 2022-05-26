@@ -1,0 +1,163 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+body {
+    background-color: transparent;
+    background-image:
+      linear-gradient(90deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 99px, transparent 100px),
+      linear-gradient(rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 99px,  transparent 100px);
+    background-size:5vw 100%, 5vw 100px;
+}
+
+/* layout */
+.horizontal-scroll {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+}
+.section1,
+.section2,
+.section3,
+.section5,
+.section7,
+.section9 {
+    width: 100%;
+    color: #fff;
+}
+.section4 .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section4 .pin-wrap>div {
+    min-width: 60vw;
+}
+.section6 .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section6 .pin-wrap>div {
+    min-width: 60vw;
+}
+.section8 .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.section8 .pin-wrap>div {
+    min-width: 60vw;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+/* #about { width: 100%; overflow-x: hidden;} */
+/* #skill { width: 100%; } */
+#works { width: 100%; overflow-x: hidden; }
+#script { width: 100%; overflow-x: hidden; }
+
+/* 가로(game) */
+#game {
+    /* height: 100vh; */
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    left: 0;
+    /* justify-content: flex-end */
+}
+#game .gameCont {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#game .gameCont>div {
+    height: 35vw;
+    width: 100vw;
+}
+
+/* contact */
+section#contact {
+    width: 100%;
+    height: 100vw;
+    overflow-x: hidden;
+}
+
+/* section 타이틀 */
+section.cont {
+    /* min-height: 40vw; */
+    /* margin-top: 7vw; */
+}
+
+.title { position: relative;}
+
+.title h2 {
+    font-family: "turretroad";
+    font-size: 20vw;
+    font-weight: 100;
+    color: #fff;
+}
+
+/* .gameTt h2 {
+    font-family: "turretroad";
+    font-size: 10vw;
+    font-weight: 100;
+    color: #fff;
+} */
+
+section#about .title {transform: translateX(39vw);}
+/* #section1 > section#about .title {padding-left: 70vw;} */
+section#skill .title {transform: translateX(-5vw);}
+section#works .title {transform: translateX(45vw);}
+#section1 > section#script .title {transform: translateX(-5vw);}
+.gameTt {width: 10vw; height: 25vw; transform: translateX(93vw);}
+.gameTt h2 {position: absolute; top: 0; right: 0;}
+#contact .title {transform: translateX(14vw)}
+
+/* section.cont .title h2::before,
+.gameTt h2::before {
+    content: '';
+    position: absolute;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: -1;
+    color: #e05057;
+} */
+
+section.cont .title h2::before {
+    content: '';
+    /* padding-left: 73vw; */
+    position: absolute;
+    top: 1vw;
+    left: 0.5vw;
+    z-index: -1;
+    color: #e05057;
+}
+
+section.cont:nth-of-type(2) .title h2::before {content: 'ABOUT';}
+/* section.cont:nth-of-type(1) .title h2::before {content: 'ABOUT';} */
+section.cont:nth-of-type(3) .title h2::before {content: 'SKILL';}
+.section4.cont .title h2::before {content: 'WORKS';}
+section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}
+#game .title h2::before {content: 'GAME';}
+#contact .title h2::before {content: 'CONTACT';}
+
+/* //section 타이틀 */
+
+/* 그림자 */
+.sha {color: #e05057 !important;}
+
+.shaBox {background-color: #e05057 !important;}
+
+.has-scroll-smooth {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
