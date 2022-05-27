@@ -16,6 +16,7 @@ body {
     display: flex;
     left: 0;
 }
+
 .section1,
 .section2,
 .section3,
@@ -31,18 +32,22 @@ body {
     justify-content: flex-start;
     align-items: center;
 }
-.section4 .pin-wrap>div {
-    min-width: 60vw;
-}
+
 .section6 .pin-wrap {
-    height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.section6 .pin-wrap>div {
-    min-width: 60vw;
+
+.section6 .pin-wrap > div {
+    width: 100vw;
 }
+
+.section6 .pin-wrap > div:nth-of-type(1) {background-color: #000;}
+.section6 .pin-wrap > div:nth-of-type(2) {background-color: #111;}
+.section6 .pin-wrap > div:nth-of-type(3) {background-color: #222;}
+.section6 .pin-wrap > div:nth-of-type(4) {background-color: #333;}
+
 .section8 .pin-wrap {
     height: 100vh;
     display: flex;
@@ -58,20 +63,17 @@ body {
 /* #about { width: 100%; overflow-x: hidden;} */
 /* #skill { width: 100%; } */
 #works { width: 100%; overflow-x: hidden; }
-#script { width: 100%; overflow-x: hidden; }
+#script { width: 100%; }
 
 /* 가로(game) */
 #game {
-    /* height: 100vh; */
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     left: 0;
-    /* justify-content: flex-end */
 }
 #game .gameCont {
-    /* height: 100vh; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -89,29 +91,16 @@ section#contact {
 }
 
 /* section 타이틀 */
-section.cont {
-    /* min-height: 40vw; */
-    /* margin-top: 7vw; */
-}
-
 .title { position: relative;}
 
 .title h2 {
     font-family: "turretroad";
     font-size: 20vw;
     font-weight: 100;
-    color: #fff;
+    /* color: #fff; */
 }
 
-/* .gameTt h2 {
-    font-family: "turretroad";
-    font-size: 10vw;
-    font-weight: 100;
-    color: #fff;
-} */
-
 section#about .title {transform: translateX(39vw);}
-/* #section1 > section#about .title {padding-left: 70vw;} */
 section#skill .title {transform: translateX(-5vw);}
 section#works .title {transform: translateX(45vw);}
 #section1 > section#script .title {transform: translateX(-5vw);}
@@ -119,19 +108,8 @@ section#works .title {transform: translateX(45vw);}
 .gameTt h2 {position: absolute; top: 0; right: 0;}
 #contact .title {transform: translateX(14vw)}
 
-/* section.cont .title h2::before,
-.gameTt h2::before {
-    content: '';
-    position: absolute;
-    top: 1vw;
-    left: 0.5vw;
-    z-index: -1;
-    color: #e05057;
-} */
-
 section.cont .title h2::before {
     content: '';
-    /* padding-left: 73vw; */
     position: absolute;
     top: 1vw;
     left: 0.5vw;
@@ -140,10 +118,9 @@ section.cont .title h2::before {
 }
 
 section.cont:nth-of-type(2) .title h2::before {content: 'ABOUT';}
-/* section.cont:nth-of-type(1) .title h2::before {content: 'ABOUT';} */
 section.cont:nth-of-type(3) .title h2::before {content: 'SKILL';}
 .section4.cont .title h2::before {content: 'WORKS';}
-section.cont:nth-of-type(5) .title h2::before {content: 'SCRIPT';}
+.section6.cont .title h2::before {content: 'SCRIPT';}
 #game .title h2::before {content: 'GAME';}
 #contact .title h2::before {content: 'CONTACT';}
 

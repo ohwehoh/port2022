@@ -350,6 +350,136 @@
 /* //skill */
 
 /* works... */
-.pin-wrap div {
-    background: #000;
+.pin-wrap {
+    padding-right: 20vw;
+}
+.pin-wrap article {
+    width: 100vw;
+    margin-right: 10vw;
+}
+
+.worksArti {
+    display: flex;
+    flex-direction: row;
+}
+
+.worksArti h3.work__number {
+    font-size: 60vw;
+    font-weight: 300;
+    line-height: 0.8;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    transform: translateY(20vw);
+}
+
+.worksArti h3:before {
+    position: absolute;
+    color: #e05057;
+    top: 1.5vw;
+    left: 1.5vw;
+    z-index: -1;
+    font-weight: 100;
+}
+
+.worksArti:nth-of-type(1) h3:before {content: "1";}
+.worksArti:nth-of-type(2) h3:before {content: "2";}
+.worksArti:nth-of-type(3) h3:before {content: "3";}
+.worksArti:nth-of-type(4) h3:before {content: "4";}
+.worksArti:nth-of-type(5) h3:before {content: "5";}
+
+.workRight {
+    transform: translateY(15vw);
+    display: flex;
+    flex-direction: column;
+}
+
+.workRight .workCont {
+    width: 70vw;
+    height: 30vw;
+    background-image: url(../img/workRight.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transform: translateY(10vw);
+}
+
+.workRight .workCont .innerBox {
+    width: 60%;
+    /* height: 84%; */
+    margin: 0 2vw;
+}
+.workRight .workCont .innerBox img {
+    width: 100%;
+    opacity: 1;
+}
+
+.workRight .workCont .descWrap {}
+
+.workRight .workCont .descWrap .workDesc {
+    width: 22vw;
+}
+
+.worksArti .workRight em {
+    font-size: 3vw;
+    color: #000;
+    font-weight: 500;
+    transform: translateY(11vw);
+}
+
+.worksArti .workDesc {
+    font-family: "Cafe24Ohsquareair";
+    width: 29vw;
+    font-size: 1vw;
+    color: #fff;
+    transform: rotate(0.1deg);
+    word-break: keep-all;
+}
+
+.worksArti  .workLink {
+    font-size: 2vw;
+    color: #fff;
+    margin-right: 2vw;
+}
+.worksArti  span {
+    font-size: 2vw;
+    color: #fff;
+}
+
+.worksArti .slider__window.hide {
+    display: none;
+}
+/* //work */
+
+/* section5 */
+.section5 div{
+    width: 100vw;
+    height: 30vw;
+}
+
+/* script */
+.section6 .title h2{
+    font-size: 6vw;
+}
+.section6.cont .title h2::before {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+#script .pin-wrap {
+    /* transform: translateX(-20vw); */
+}
+
+#script .ribbon {
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 101%;
+    height: 5vw;
+    background-color: #fff;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    position: relative;
+    z-index: 0;
 }
