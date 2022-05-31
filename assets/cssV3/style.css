@@ -596,19 +596,22 @@
   height: 80%;
   margin-left: 10vw;
 }
+
 #typing {
   width: 100vw;
   height: 50vw;
-
 }
+
 #memory {
   width: 100vw;
   height: 50vw;
 }
+
 #tetris {
   width: 100vw;
   height: 50vw;
 }
+
 #music {
   width: 100vw;
   height: 50vw;
