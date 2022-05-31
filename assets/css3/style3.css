@@ -558,9 +558,7 @@ img {
 /* //work */
 
 /* script */
-#script {
-    height: 305.7vw;
-}
+#script { height: 305.7vw; }
 
 #script .ribbon {
     white-space: nowrap;

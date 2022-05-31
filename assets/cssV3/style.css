@@ -546,22 +546,178 @@
     width: 80vw;
 }
 
-#script .pin-wrap .scriptCont {
-    width: 100vw;
-}
-.line {
-  height: 2px;
-  width: 10vw;
-  background-color: #fff;
+.scriptIntro .line {
+    height: 2px;
+    width: 10vw;
+    background-color: #fff;
 }
 
-#script .ribbon {
-  white-space: nowrap;
-  width: 101vw;
-  height: 5vw;
-  background-color: #fff;
-  margin-top: 5vw;
-  margin-bottom: 5vw;
-  position: relative;
-  color: #000;
+#script .pin-wrap .scriptCont {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
+
+#script .pin-wrap .scriptCont .line {
+    height: 2px;
+    width: 10vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#script .pin-wrap .scriptCont .ro {
+    width: 100vh;
+    height: 10vw;
+}
+
+#script .pin-wrap .scriptCont .ro span { white-space: nowrap; }
+
+#script .pin-wrap .scriptCont .ro .scriptContT1 { font-size: 6vw; color: rgba(0, 0, 0, 0.5); }
+#script .pin-wrap .scriptCont .ro .scriptContT2 { font-size: 5vw; color: rgba(0, 0, 0, 0.7); }
+
+#script .pin-wrap .scriptCont .frame {
+  position: absolute;
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 50%;
+}
+/* //script */
+
+/* game */
+#game .title {
+  transform: translateX(-3vw);
+}
+
+#game .gameFrame {
+  width: 70%;
+  height: 80%;
+  margin-left: 10vw;
+}
+#typing {
+  width: 100vw;
+  height: 50vw;
+
+}
+#memory {
+  width: 100vw;
+  height: 50vw;
+}
+#tetris {
+  width: 100vw;
+  height: 50vw;
+}
+#music {
+  width: 100vw;
+  height: 50vw;
+}
+
+/* contact */
+/* contact */
+#contact {}
+#contact .contactWrap {
+    width: 68%;
+    margin-left: 23vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #000;
+}
+
+.contactWrap .contactHead {
+  width: 100%;
+  text-align: right;
+}
+
+.contactWrap .contactHead.top {
+  height: 50%;
+  font-weight: 900;
+  font-size: 7vw;
+}
+
+.contactWrap .contactHead.bottom {
+  height: 50%;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 11vw;
+  position: relative;
+  z-index: 0;
+  white-space: nowrap;
+}
+
+.contactWrap .contactHead.bottom:before {
+    content: 'contact me';
+    position: absolute;
+    text-transform: uppercase;
+    right: -1vw; top: 1.3vw;
+    color: #e05057;
+    z-index: -1;
+}
+
+.contactWrap .contactBody {
+    margin-top: 6vw;
+    width: 100%;
+    height: 20vw;
+    font-family: "Mohave";
+    font-weight: 700;
+    font-size: 1.2vw;
+}
+
+.contactWrap .contactBody.left {
+  width: 40%;
+  height: 100%;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.contactWrap .contactBody.left .infoLeft {
+    width: 30%;
+}
+.contactWrap .contactBody.left .infoLeft .contactPic {
+    width: 4vw;
+    height: 4vw;
+    background-color: #fff;
+    background-image: url(../img/picture.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contactWrap .contactBody.left .infoRight {
+    width: 58%;
+    line-height: 1.3;
+}
+.contactWrap .contactBody.left .infoRight.top {}
+.contactWrap .contactBody.left .infoRight.bottom {
+    padding-top: 3vw;
+}
+
+.contactWrap .contactBody.right {
+  width: 60%;
+  height: 100%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.contactWrap .contactBody.right form {}
+.contactWrap .contactBody.right form input {
+    width: 100%; height: 3vw;
+    margin-bottom: 2vw;border:none;
+    padding-left: 1vw;}
+.contactWrap .contactBody.right form textarea { width: 100%; margin-bottom: 2vw;border:none; padding: 1vw;}
+.contactWrap .contactBody.right form button {
+    width: 100%;
+    font-family: "Mohave";
+    height: 3vw;
+    background-color: #fff;
+    border:none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9vw;
+}
+.contactWrap .contactBody.right form input::placeholder { font-family: "Mohave"; font-weight: 700; }
+.contactWrap .contactBody.right form textarea::placeholder  { font-family: "Mohave"; font-weight: 700;}
